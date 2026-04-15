@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee Shop POS Mockup</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ede8e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    /* Ambient background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(232, 200, 74, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(200, 195, 185, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(180, 175, 165, 0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .scene {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      z-index: 1;
+      transform-origin: top center;
+    }
+
+    /* ── Counter surface ── */
+    .counter {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Tablet stand ── */
+    .stand-arm {
+      width: 22px;
+      height: 64px;
+      background: linear-gradient(to right, #888480, #aaa9a4, #888480);
+      border-radius: 4px 4px 0 0;
+      margin-top: -2px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    }
+
+    .stand-base {
+      width: 140px;
+      height: 18px;
+      background: linear-gradient(to bottom, #9a9590, #7a7570);
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ── Tablet frame (landscape iPad-style) ── */
+    .tablet {
+      width: 900px;
+      height: 496px;
+      background: linear-gradient(145deg, #3a3835, #252320);
+      border-radius: 28px;
+      padding: 16px;
+      position: relative;
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.12),
+        0 8px 40px rgba(0,0,0,0.22),
+        0 2px 8px rgba(0,0,0,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+      z-index: 3;
+    }
+
+    /* Tablet side button details */
+    .tablet::before {
+      content: '';
+      position: absolute;
+      right: -4px;
+      top: 80px;
+      width: 4px;
+      height: 40px;
+      background: #1e1c1a;
+      border-radius: 0 3px 3px 0;
+      box-shadow: 0 50px 0 #1e1c1a;
+    }
+
+    .tablet::after {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 100px;
+      width: 4px;
+      height: 30px;
+      background: #1e1c1a;
+      border-radius: 3px 0 0 3px;
+      box-shadow: 0 40px 0 #1e1c1a, 0 80px 0 #1e1c1a;
+    }
+
+    /* Camera dot */
+    .tablet-camera {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background: #111;
+      border-radius: 50%;
+      border: 1px solid #333;
+    }
+
+    /* Home bar */
+    .tablet-home {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 2px;
+    }
+
+    /* ── Screen ── */
+    .screen {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* The video itself */
+    .screen video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #000;
+    }
+
+    /* ── Counter surface decorations ── */
+    .counter-surface {
+      width: 980px;
+      height: 40px;
+      background: linear-gradient(to bottom, #ccc8c0, #b8b4ac);
+      border-radius: 0 0 12px 12px;
+      margin-top: -4px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .counter-surface::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(to right, transparent, rgba(232,200,74,0.6), transparent);
+    }
+
+    /* Receipt paper */
+    .receipt {
+      position: absolute;
+      bottom: -26px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 56px;
+      background: #f8f4ee;
+      border-radius: 0 0 3px 3px;
+      overflow: hidden;
+    }
+
+    .receipt-lines {
+      padding: 4px 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .receipt-line {
+      height: 2px;
+      background: #ccc;
+      border-radius: 1px;
+    }
+
+    .receipt-line.dark { background: #999; }
+    .receipt-line.short { width: 60%; }
+    .receipt-line.medium { width: 80%; }
+  </style>
+</head>
+<body>
+
+<div class="scene">
+
+  <!-- Counter + Tablet -->
+  <div class="counter">
+
+    <!-- Tablet -->
+    <div class="tablet">
+      <div class="tablet-camera"></div>
+      <div class="tablet-home"></div>
+
+      <div class="screen">
+        <!-- Video -->
+        <video autoplay loop muted playsinline>
+          <source src="checkoutflow.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+
+    <!-- Stand arm -->
+    <div class="stand-arm"></div>
+
+    <!-- Counter surface -->
+    <div class="counter-surface">
+      <!-- Receipt -->
+      <div class="receipt">
+        <div class="receipt-lines">
+          <div class="receipt-line dark medium"></div>
+          <div class="receipt-line short"></div>
+          <div class="receipt-line medium"></div>
+          <div class="receipt-line short"></div>
+          <div class="receipt-line dark"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  // Viewport-fit scaling — shrinks scene to fit both width AND height, no scroll
+  function scaleScene() {
+    const scene = document.querySelector('.scene');
+    // Measure natural size with transform cleared
+    scene.style.transform = 'none';
+    const naturalW = scene.scrollWidth;
+    const naturalH = scene.scrollHeight;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const pad = 40;
+    const scale = Math.min(1, (vw - pad) / naturalW, (vh - pad) / naturalH);
+    scene.style.transform = `scale(${scale})`;
+    scene.style.transformOrigin = 'top center';
+    // Set body height to exactly the scaled content — no extra space, no scroll
+    const scaledH = naturalH * scale;
+    document.body.style.minHeight = scaledH + pad + 'px';
+    document.body.style.height = scaledH + pad + 'px';
+    document.body.style.overflow = 'hidden';
+  }
+  scaleScene();
+  window.addEventListener('resize', scaleScene);
+</script>
+
+</body>
+</html>

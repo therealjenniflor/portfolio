@@ -70,11 +70,20 @@ export default function Home() {
       <main>
         {/* ─── Hero ─── */}
         <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
-          <div className="max-w-[1500px] mx-auto">
+          <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-[max-content_1fr] items-center overflow-hidden">
             <h1 className="font-display font-bold leading-[0.9] tracking-tight text-[var(--color-jz-text)]">
               <span className="block text-[clamp(5rem,12vw,14rem)]">Jennifer</span>
               <span className="block text-[clamp(5rem,12vw,14rem)]">Zaragoza</span>
             </h1>
+            <div className="hidden md:flex items-center justify-center overflow-hidden">
+              <span
+                aria-hidden="true"
+                className="font-display font-bold text-yellow-400 select-none pointer-events-none text-[clamp(15rem,36vw,42rem)] leading-none"
+                style={{ opacity: 0.4 }}
+              >
+                *
+              </span>
+            </div>
             <p className="mt-6 md:mt-8 font-body text-lg md:text-2xl text-[var(--color-jz-text-secondary)] max-w-2xl leading-relaxed">
               is a cool{" "}
               <span className="font-semibold text-[var(--color-jz-text)]">Product Designer</span>{" "}
@@ -89,25 +98,28 @@ export default function Home() {
         {/* ─── About Intro / Philosophies ─── */}
         <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-20 md:py-28">
           <div className="max-w-[1500px] mx-auto">
-            <p className="font-body text-lg md:text-2xl text-[var(--color-jz-text-secondary)] max-w-3xl leading-relaxed mb-2">
-              With{" "}
-              <span className="font-semibold text-[var(--color-jz-text)]">6 years of experience</span>
-              , I specialize in{" "}
-              <span className="font-semibold text-[var(--color-jz-text)]">Experience Design</span>,{" "}
-              <span className="font-semibold text-[var(--color-jz-text)]">Design Thinking</span>, and{" "}
-              <span className="font-semibold text-[var(--color-jz-text)]">Product Strategy</span> in the{" "}
-              <span className="font-semibold text-[var(--color-jz-text)]">B2B SaaS space</span>.
-            </p>
-            <p className="font-body text-lg md:text-xl text-[var(--color-jz-text-secondary)] mb-10">
-              I am passionate about all things{" "}
-              <span className="font-semibold text-[var(--color-jz-text)] jz-highlight">Design System</span>{" "}
-              and{" "}
-              <span className="font-semibold text-[var(--color-jz-text)] jz-highlight">Design Ops.</span>
-            </p>
+            {/* Text block — both paragraph and heading share the same left indent */}
+            <div className="mb-12">
+              <p className="font-body text-lg md:text-2xl text-[var(--color-jz-text-secondary)] max-w-3xl leading-relaxed mb-2">
+                With{" "}
+                <span className="font-semibold text-[var(--color-jz-text)]">6 years of experience</span>
+                , I specialize in{" "}
+                <span className="font-semibold text-[var(--color-jz-text)]">Experience Design</span>,{" "}
+                <span className="font-semibold text-[var(--color-jz-text)]">Design Thinking</span>, and{" "}
+                <span className="font-semibold text-[var(--color-jz-text)]">Product Strategy</span> in the{" "}
+                <span className="font-semibold text-[var(--color-jz-text)]">B2B SaaS space</span>.
+              </p>
+              <p className="font-body text-lg md:text-xl text-[var(--color-jz-text-secondary)] mb-10 max-w-3xl">
+                I am passionate about all things{" "}
+                <span className="font-semibold text-[var(--color-jz-text)] jz-highlight">Design System</span>{" "}
+                and{" "}
+                <span className="font-semibold text-[var(--color-jz-text)] jz-highlight">Design Ops.</span>
+              </p>
 
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-[var(--color-jz-text)] mb-12">
-              Collaborative * Scalable * Empathetic
-            </h2>
+              <h2 className="font-display text-4xl md:text-6xl font-bold text-[var(--color-jz-text)] leading-tight">
+                Collaborative * Scalable * Empathetic
+              </h2>
+            </div>
 
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-8">
               My Design Philosophies (not in any particular order)
