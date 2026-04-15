@@ -377,6 +377,73 @@ export default function PosRedesignPage() {
           </div>
         </section>
 
+        {/* ─── Reflection ─── */}
+        <section className="bg-[#1a130a] overflow-hidden py-16 md:py-24">
+
+          {/* Scrolling marquee ticker */}
+          <div className="overflow-hidden mb-14 cursor-default select-none" title="Hover to pause">
+            <div className="marquee-track flex whitespace-nowrap">
+              {/* Duplicate twice so the loop is seamless */}
+              {[0, 1].map((n) => (
+                <span key={n} className="flex shrink-0 items-center font-display text-5xl md:text-6xl font-bold text-[#f5f0e8]">
+                  {Array.from({ length: 8 }).map((_, i) => (
+                    <span key={i} className="inline-flex items-center gap-4 mr-4">
+                      <span>Reflection</span>
+                      <svg viewBox="0 0 100 100" className="w-8 h-8 shrink-0 fill-[#f5f0e8]" xmlns="http://www.w3.org/2000/svg">
+                        {[0,60,120,180,240,300].map((deg) => (
+                          <ellipse key={deg} cx="50" cy="26" rx="11" ry="18" transform={`rotate(${deg} 50 50)`}/>
+                        ))}
+                      </svg>
+                    </span>
+                  ))}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Three columns */}
+          <div className="max-w-[1500px] mx-auto px-6 md:px-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+
+              {/* How I grew */}
+              <div>
+                <div className="inline-block border border-[#e8c84a] bg-[#f5f0e8] text-[#1a130a] font-display font-medium text-sm px-6 py-3 mb-8 rounded-sm">
+                  How I grew
+                </div>
+                <ul className="space-y-4 text-[#c8bfb0] font-body text-sm leading-relaxed list-none">
+                  <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I strengthened my ability to <strong className="text-[#f5f0e8]">delegate tasks</strong> and lead cross-functional efforts across design and product.</span></li>
+                  <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I improved how I <strong className="text-[#f5f0e8]">collaborate with product managers</strong>, creating clarity on goals and alignment across verticals.</span></li>
+                  <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I developed more confidence in making fast, informed decisions—even without formal user interviews—by leaning into internal insights and customer-facing teams.</span></li>
+                </ul>
+              </div>
+
+              {/* What I learned */}
+              <div>
+                <div className="inline-block border border-[#e8c84a] bg-[#f5f0e8] text-[#1a130a] font-display font-medium text-sm px-6 py-3 mb-8 rounded-sm">
+                  What I learned
+                </div>
+                <ul className="space-y-4 text-[#c8bfb0] font-body text-sm leading-relaxed list-none">
+                  <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I saw how <strong className="text-[#f5f0e8]">small UX decisions</strong>, like modifier placement or tipping flow, can have a big impact on real-world merchant efficiency.</span></li>
+                  <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I learned to <strong className="text-[#f5f0e8]">prioritize user value and feasibility</strong> under time constraints, making tradeoffs without compromising on core experience.</span></li>
+                </ul>
+              </div>
+
+              {/* What I'd do differently */}
+              <div>
+                <div className="inline-block border border-[#e8c84a] bg-[#f5f0e8] text-[#1a130a] font-display font-medium text-sm px-6 py-3 mb-8 rounded-sm">
+                  What I&apos;d do differently
+                </div>
+                <ul className="space-y-4 text-[#c8bfb0] font-body text-sm leading-relaxed list-none">
+                  <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I would advocate for <strong className="text-[#f5f0e8]">earlier usability testing</strong> to validate flow assumptions and catch edge cases.</span></li>
+                  <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I&apos;d bring engineers into ideation sooner to surface <strong className="text-[#f5f0e8]">technical constraints</strong> before design handoff.</span></li>
+                  <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I&apos;d set clearer expectations around multi-department handoffs to minimize back-and-forth in execution phases.</span></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         {/* ─── Prototype / Video ─── */}
         <section className={`${c.surface} px-6 md:px-10 py-16 md:py-24`}>
           <div className="max-w-[1500px] mx-auto">
