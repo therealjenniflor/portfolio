@@ -166,8 +166,8 @@ export default function DepositThresholdPage() {
             </div>
             <div>
               <Image
-                src="/images/deposit-threshold.png"
-                alt="Deposit Threshold Overview"
+                src="/images/hero-image.png"
+                alt="Deposit Threshold — Hero"
                 width={0}
                 height={0}
                 sizes="(max-width: 768px) 100vw, 60vw"
@@ -307,7 +307,7 @@ export default function DepositThresholdPage() {
                   key={step.number}
                   className="bg-[var(--color-jz-surface)] p-10"
                 >
-                  <span className="font-display text-5xl font-bold text-[var(--color-jz-border)] block mb-4 leading-none">
+                  <span className="font-display text-5xl font-bold text-[#e8d99a] block mb-4 leading-none">
                     {step.number}
                   </span>
                   <h3 className="font-display text-xl font-bold text-[var(--color-jz-text)] mb-3">
@@ -337,10 +337,15 @@ export default function DepositThresholdPage() {
 
             {/* Hidden Deposit Requirements */}
             <div className="mb-20 md:mb-28">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)] mb-10">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)] mb-4">
                 Hidden Deposit Requirements
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+              <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-10">
+                In the previous design, the minimum deposit threshold was not visible within the payment
+                modal. Sales associates had to leave the modal and return to the invoice screen to confirm
+                the amount.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div>
                   <p className="font-body text-xs uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">1. Main POS</p>
                   <Image src="/images/pos1.png" alt="Main POS screen" width={0} height={0} sizes="50vw" style={{ width: "100%", height: "auto" }} className="rounded-sm" unoptimized />
@@ -350,57 +355,46 @@ export default function DepositThresholdPage() {
                   <Image src="/images/pos.png" alt="Payment Modal" width={0} height={0} sizes="50vw" style={{ width: "100%", height: "auto" }} className="rounded-sm" unoptimized />
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-start">
-                <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed">
-                  In the previous design, the minimum deposit threshold was not visible within the payment
-                  modal. Sales associates had to leave the modal and return to the invoice screen to confirm
-                  the amount.
-                </p>
-                <div>
-                  <h4 className="font-display text-lg font-bold text-[var(--color-jz-text)] mb-4">
-                    Why was this a problem?
-                  </h4>
-                  <ul className="space-y-3">
-                    {whyProblemPOS.map((item, i) => (
-                      <li key={i} className="flex gap-2 font-body text-sm text-[var(--color-jz-text-secondary)]">
-                        <span className="shrink-0 text-[var(--color-jz-text-muted)] mt-0.5">·</span>
-                        <span><strong className="text-[var(--color-jz-text)]">{item.bold}</strong>{item.rest}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              <h4 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)] mb-6">
+                Why was Payment Modal a problem?
+              </h4>
+              <ul className="space-y-5">
+                {whyProblemPOS.map((item, i) => (
+                  <li key={i} className="flex gap-3 font-body text-lg text-[var(--color-jz-text-secondary)]">
+                    <span className="shrink-0 text-[var(--color-jz-text-muted)] mt-1">·</span>
+                    <span><strong className="text-[var(--color-jz-text)]">{item.bold}</strong>{item.rest}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Info Hidden from the Customer */}
             <div>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)] mb-6">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)] mb-4">
                 Info Hidden from the Customer
               </h3>
-              <p className="font-body text-xs uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
+              <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-4">
+                In the previous design, the Customer-Facing Display (CFD) only showed the total due. The
+                required deposit threshold amount was not surfaced, leaving customers unaware of the
+                payment requirement unless verbally explained by the associate.
+              </p>
+              <p className="font-body text-xs uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
                 The Client-Facing Display (CFD)
               </p>
-              <Image src="/images/client-facing-display.png" alt="Client-Facing Display before state" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} className="rounded-sm" unoptimized />
-              <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-12 items-start mt-10">
-                <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed">
-                  In the previous design, the Customer-Facing Display (CFD) only showed the total due. The
-                  required deposit threshold amount was not surfaced, leaving customers unaware of the
-                  payment requirement unless verbally explained by the associate.
-                </p>
-                <div>
-                  <h4 className="font-display text-lg font-bold text-[var(--color-jz-text)] mb-4">
-                    Why was this a problem?
-                  </h4>
-                  <ul className="space-y-3">
-                    {whyProblemCFD.map((item, i) => (
-                      <li key={i} className="flex gap-2 font-body text-sm text-[var(--color-jz-text-secondary)]">
-                        <span className="shrink-0 text-[var(--color-jz-text-muted)] mt-0.5">·</span>
-                        <span><strong className="text-[var(--color-jz-text)]">{item.bold}</strong>{item.rest}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="flex justify-center mb-12">
+                <Image src="/images/info-hidden.png" alt="Client-Facing Display before state" width={0} height={0} sizes="60vw" style={{ width: "60%", height: "auto" }} className="rounded-sm" unoptimized />
               </div>
+              <h4 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)] mb-6">
+                Why was the CFD a problem?
+              </h4>
+              <ul className="space-y-5">
+                {whyProblemCFD.map((item, i) => (
+                  <li key={i} className="flex gap-3 font-body text-lg text-[var(--color-jz-text-secondary)]">
+                    <span className="shrink-0 text-[var(--color-jz-text-muted)] mt-1">·</span>
+                    <span><strong className="text-[var(--color-jz-text)]">{item.bold}</strong>{item.rest}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
