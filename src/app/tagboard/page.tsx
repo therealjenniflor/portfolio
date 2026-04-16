@@ -19,7 +19,7 @@ const featured = [
     tags: ["Live Data Integration", "NBA Project"],
     description:
       "Optimizing the user experience by introducing a feature that seamlessly automates sports data importation, improving the process of airing their graphics for sport events.",
-    href: "#",
+    href: "/nba-sportradar",
     image: "/images/API-SR.png",
   },
   {
