@@ -5,6 +5,14 @@ import { useState, useEffect, useRef } from "react";
 
 const projectGroups = [
   {
+    label: "Global Payments",
+    href: "/global-payments",
+    studies: [
+      { title: "Checkout Flow Redesign", href: "/pos-redesign" },
+      { title: "Deposit Threshold", href: "/deposit-threshold" },
+    ],
+  },
+  {
     label: "Tagboard",
     href: "/tagboard",
     studies: [
@@ -14,14 +22,6 @@ const projectGroups = [
       { title: "Micro-interactions", href: "#" },
       { title: "Google Sheet Integration", href: "#" },
       { title: "Style Guide", href: "#" },
-    ],
-  },
-  {
-    label: "Global Payments",
-    href: "/global-payments",
-    studies: [
-      { title: "Checkout Flow Redesign", href: "/pos-redesign" },
-      { title: "Deposit Threshold", href: "/deposit-threshold" },
     ],
   },
 ];
@@ -50,7 +50,7 @@ export default function Nav() {
   );
 
   return (
-    <header className="sticky top-0 z-50 bg-[var(--color-jz-bg)]/95 backdrop-blur-sm border-b border-[var(--color-jz-border)]">
+    <header className="sticky top-0 z-50 backdrop-blur-sm" style={{ background: 'linear-gradient(135deg, #fef6cc 0%, #fce4e8 100%)' }}>
       <div className="max-w-[1500px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link
@@ -86,20 +86,16 @@ export default function Nav() {
             </button>
 
             {projectsOpen && (
-              <div className="absolute top-full left-0 mt-2 w-64 bg-[var(--color-jz-bg)] border border-[var(--color-jz-border)] shadow-sm z-50">
+              <div className="absolute top-full left-0 mt-2 w-64 bg-[var(--color-jz-bg)] border border-pink-400 z-50 rounded-xl overflow-hidden" style={{ boxShadow: '0 4px 24px rgba(255, 182, 193, 0.35)' }}>
                 {projectGroups.map((group, i) => (
                   <div key={group.label}>
-                    {i > 0 && <div className="border-t border-[var(--color-jz-border)]" />}
+                    {i > 0 && <div className="border-t border-pink-100" />}
                     {/* Group heading row */}
                     <div className="flex items-center justify-between px-4 py-3">
                       <Link
                         href={group.href}
                         onClick={() => setProjectsOpen(false)}
-                        className={`font-body text-xs font-semibold uppercase tracking-widest transition-colors ${
-                          pathname === group.href
-                            ? "text-[var(--color-jz-text)]"
-                            : "text-[var(--color-jz-text-muted)] hover:text-[var(--color-jz-text)]"
-                        }`}
+                        className="font-body text-xs font-semibold uppercase tracking-widest transition-colors text-[var(--color-jz-text)] hover:text-[var(--color-jz-accent)]"
                       >
                         {group.label}
                       </Link>

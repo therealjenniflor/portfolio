@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-jz-text)] text-[var(--color-jz-bg)] py-16 px-6 md:px-10">
+    <footer className="py-16 px-6 md:px-10 text-[var(--color-jz-text)]" style={{ background: 'linear-gradient(135deg, #fef6cc 0%, #fce4e8 100%)' }}>
       <div className="max-w-[1500px] mx-auto text-center">
         <p className="font-display text-2xl md:text-3xl font-semibold mb-6">
           If you like what you see and want to chat:
