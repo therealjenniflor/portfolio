@@ -89,9 +89,9 @@ export default function Home() {
               <span className="block text-[clamp(5rem,12vw,14rem)]">Zaragoza</span>
             </h1>
             <p className="mt-6 md:mt-8 font-body text-lg md:text-2xl text-[var(--color-jz-text-secondary)] max-w-2xl leading-relaxed">
-              is a cool{" "}
+              is a{" "}
               <span className="font-semibold text-[var(--color-jz-text)]">Product Designer</span>{" "}
-              who excels in navigating ambiguity, and refining defined problems.
+              who navigates ambiguity, sharpens defined problems, and uses AI to move faster without cutting corners.
             </p>
           </div>
         </section>

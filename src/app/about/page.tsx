@@ -15,7 +15,7 @@ export default function AboutPage() {
       <Nav />
       <main>
         {/* ─── Hero — text left, portrait right ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-0 md:pt-24">
+        <section className="px-6 md:px-10 pt-16 pb-0 md:pt-24" style={{ background: 'linear-gradient(135deg, #fef6cc 0%, #fce4e8 100%)' }}>
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-end">
             {/* Left: text */}
             <div className="pb-16 md:pb-24">
@@ -26,20 +26,19 @@ export default function AboutPage() {
                 You can call me{" "}
                 <span className="font-semibold text-[var(--color-jz-text)]">JZ</span> from here on out.
               </p>
-              <p className="font-body text-base text-[var(--color-jz-text-muted)] max-w-md leading-relaxed italic mb-8">
-                fun fact: I entered my Figjam drawing of a Platypus in a Figma contest and won Figma swag!{" "}
-                <a
-                  href="https://www.instagram.com/jenniflor.wtrcolor/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-4 decoration-[var(--color-jz-accent)] text-[var(--color-jz-text-secondary)] hover:text-[var(--color-jz-text)] transition-colors"
-                >
-                  You can check it out on my IG
-                </a>
+              <p className="font-body text-base text-[var(--color-jz-text-secondary)] max-w-md leading-relaxed mb-4">
+                My journey into product design started with a background in veterinary medicine, but my passion for fitness and finding the best workout app evolved into finding beautiful and intuitive experiences. I made the scary yet, exciting decision to leave vet med to pursue a career in product design.
+              </p>
+              <p className="font-body text-base text-[var(--color-jz-text-secondary)] max-w-md leading-relaxed mb-8">
+                My passion for design derives from my need to know the{" "}
+                <span className="font-semibold text-[var(--color-jz-text)]">&ldquo;why?&rdquo;</span>{" "}
+                and{" "}
+                <span className="font-semibold text-[var(--color-jz-text)]">&ldquo;how?&rdquo;</span>{" "}
+                about everything. This has led me to develop a creative and purposeful approach to solving challenging problems—not surprising given my Biology/Chemistry background.
               </p>
               <a
                 href="mailto:jar.zaragoza91@gmail.com"
-                className="inline-block font-body text-sm font-semibold px-6 py-3 border border-[var(--color-jz-text)] text-[var(--color-jz-text)] hover:bg-[var(--color-jz-text)] hover:text-[var(--color-jz-bg)] transition-colors duration-200"
+                className="inline-block font-body text-sm font-semibold px-8 py-3 rounded-full border border-[var(--color-jz-text)] text-[var(--color-jz-text)] hover:bg-[var(--color-jz-text)] hover:text-[var(--color-jz-bg)] transition-colors duration-200 uppercase tracking-widest"
               >
                 Email JZ
               </a>
@@ -60,33 +59,28 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── Bio — below the fold, centered ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
-          <div className="max-w-2xl mx-auto text-center space-y-6">
-            <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed">
-              My journey into product design started with a background in veterinary medicine, but my passion for fitness and finding the best workout app evolved into finding beautiful and intuitive experiences. I made the scary yet, exciting decision to leave vet med to pursue a career in product design.
-            </p>
-            <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed">
-              My passion for design derives from my need to know the{" "}
-              <span className="font-semibold text-[var(--color-jz-text)]">&ldquo;why?&rdquo;</span>{" "}
-              and{" "}
-              <span className="font-semibold text-[var(--color-jz-text)]">&ldquo;how?&rdquo;</span>{" "}
-              about everything. This has led me to develop a creative and purposeful approach to solving challenging problems—not surprising given my Biology/Chemistry background.
-            </p>
-            <p className="font-body text-lg font-semibold text-[var(--color-jz-text)]">
-              We science nerds love asking questions!
-            </p>
-          </div>
-        </section>
+        {/* ─── Wave divider (Hero → More than a Designer) ─── */}
+        <div className="overflow-hidden leading-none" style={{ background: '#FFFDF7' }}>
+          <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block" style={{ height: '80px' }}>
+            <path d="M0,0 L0,60 C240,0 480,80 720,40 C960,0 1200,80 1440,20 L1440,0 Z" fill="url(#aboutHeroGrad)" />
+            <defs>
+              <linearGradient id="aboutHeroGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="#fef6cc" />
+                <stop offset="100%" stopColor="#fce4e8" />
+              </linearGradient>
+            </defs>
+            <path d="M0,60 C240,0 480,80 720,40 C960,0 1200,80 1440,20" fill="none" stroke="#ffae00" strokeWidth="2" />
+          </svg>
+        </div>
 
         {/* ─── More than a Designer ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section className="px-6 md:px-10 py-16 md:py-24" style={{ backgroundColor: '#FFFDF7' }}>
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               More than a Designer
             </p>
             <h2 className="font-display text-4xl md:text-6xl font-bold text-[var(--color-jz-text)] mb-16">
-              Bold * Curious * Fun
+              Bold <span style={{ color: '#ffae00' }}>*</span> Curious <span style={{ color: '#ffae00' }}>*</span> Fun
             </h2>
 
             <div className="space-y-20 md:space-y-28">
