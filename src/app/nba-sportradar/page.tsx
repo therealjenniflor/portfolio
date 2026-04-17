@@ -234,6 +234,59 @@ export default function NbaSportradarPage() {
           </div>
         </section>
 
+        {/* ─── Step 1 Detail: Understanding Parameters ─── */}
+        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+          <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div>
+              <Image
+                src="/images/SR+Map.webp"
+                alt="Sportradar API Map"
+                width={0}
+                height={0}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ width: "auto", height: "auto", maxHeight: "60vh", maxWidth: "100%", objectFit: "contain" }}
+                className="rounded-sm mb-4"
+                unoptimized
+              />
+              <p className="font-body text-sm font-semibold text-[var(--color-jz-text-secondary)] mb-1">
+                Sportradar&apos;s API Map
+              </p>
+              <p className="font-body text-sm text-[var(--color-jz-text-muted)]">
+                Map I used to help guide my design direction while back-end engineers gathered more information on API capabilities.
+              </p>
+            </div>
+            <div>
+              <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
+                Step 1 — Understanding Parameters
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] leading-tight mb-6">
+                Sportradar&apos;s API Map
+              </h2>
+              <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-4">
+                To begin, I utilized the API map provided to understand the types of parameters that are required to make API calls.
+              </p>
+              <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-8">
+                It was understood that to access the main data sources, users would only need to{" "}
+                <strong className="text-[var(--color-jz-text)]">input a date or specific season.</strong>
+              </p>
+              <p className="font-body text-base font-semibold text-[var(--color-jz-text)] mb-4">
+                This was important to understand because:
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Helps determine the user experience and user flow",
+                  "Selecting a primary feed would determine the additional data users can select from",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3 font-body text-base text-[var(--color-jz-text-secondary)]">
+                    <span className="shrink-0 text-[var(--color-jz-text-muted)] mt-1">·</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* ─── Step 2 Detail: Postman Exploration ─── */}
         <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
@@ -300,7 +353,7 @@ export default function NbaSportradarPage() {
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-                Step 3 — Design Thinking
+                Step 4 — Design Thinking
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] leading-tight mb-6">
                 Designing for Scalability
