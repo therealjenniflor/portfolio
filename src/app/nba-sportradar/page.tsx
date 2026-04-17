@@ -78,14 +78,14 @@ export default function NbaSportradarPage() {
               {[0, 1].map((n) => (
                 <span
                   key={n}
-                  className="flex shrink-0 items-center font-display text-2xl md:text-3xl font-bold text-[#c8b96a]/50"
+                  className="flex shrink-0 items-center font-display text-lg md:text-xl font-bold text-[var(--color-jz-accent)]"
                 >
                   {Array.from({ length: 8 }).map((_, i) => (
                     <span key={i} className="inline-flex items-center gap-4 mr-4">
                       <span>NBA × Sportradar</span>
                       <svg
                         viewBox="0 0 100 100"
-                        className="w-5 h-5 shrink-0 fill-[#c8b96a]/50"
+                        className="w-5 h-5 shrink-0 fill-[var(--color-jz-accent)]"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         {[0, 60, 120, 180, 240, 300].map((deg) => (
