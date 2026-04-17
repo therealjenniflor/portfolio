@@ -84,7 +84,7 @@ export default function Home() {
                 *
               </span>
             </div>
-            <p className="mt-6 md:mt-8 font-body text-lg md:text-2xl text-[var(--color-jz-text-secondary)] max-w-2xl leading-relaxed">
+            <p className="mt-3 md:mt-4 font-body text-lg md:text-2xl text-[var(--color-jz-text-secondary)] max-w-2xl leading-relaxed">
               is a cool{" "}
               <span className="font-semibold text-[var(--color-jz-text)]">Product Designer</span>{" "}
               who excels in navigating ambiguity, and refining defined problems.

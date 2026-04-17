@@ -272,7 +272,7 @@ export default function PosRedesignPage() {
                 behaviors without requiring new interviews.
               </p>
               <Image
-                src="/images/persona-doc.webp"
+                src="/images/person-doc.png"
                 alt="User Persona — Alex Torres"
                 width={0}
                 height={0}

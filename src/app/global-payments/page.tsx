@@ -14,7 +14,7 @@ const projects = [
   {
     number: "01",
     company: "Global Payments",
-    launched: "2024",
+    launched: "2025",
     title: "Checkout Flow Redesign",
     tags: ["UX Enhancement", "Leadership", "Prototype"],
     description:
