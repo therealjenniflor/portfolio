@@ -348,52 +348,90 @@ export default function NbaSportradarPage() {
           </div>
         </section>
 
+        {/* ─── Step 3: Selecting Parameters ─── */}
+        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+          <div className="max-w-[1500px] mx-auto">
+            <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
+              Step 3 — Selecting Parameters
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] leading-tight mb-10">
+              Selecting Parameters
+            </h2>
+            <Image
+              src="/images/parameters.webp"
+              alt="Graphic Editor modal — Selecting parameters"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "auto", maxHeight: "80vh", objectFit: "contain" }}
+              className="rounded-sm mb-6"
+              unoptimized
+            />
+            <p className="font-body text-sm text-center text-[var(--color-jz-text-muted)] max-w-xl mx-auto">
+              <strong className="text-[var(--color-jz-text-secondary)]">Graphic Editor, Modal:</strong>{" "}
+              Once Sportradar data is selected, users can choose parameters in order to get the data they
+              want. In-Game and Seasonal will offer different types of data to filter from.
+            </p>
+          </div>
+        </section>
+
         {/* ─── Scalability ─── */}
         <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
-          <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-            <div>
-              <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-                Step 4 — Design Thinking
-              </p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] leading-tight mb-6">
-                Designing for Scalability
-              </h2>
-              <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-8">
-                The workflow needed to be specific enough for NBA demands while remaining adaptive for
-                other sports. Learning about Sportradar API keys provided insight into how other
-                providers might structure data — enabling a flow that could theoretically tailor to any
-                sports data provider.
-              </p>
-              <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
-                Future Integration Plans
-              </p>
-              <ul className="space-y-3">
-                {futureProviders.map((provider) => (
-                  <li
-                    key={provider}
-                    className="flex gap-3 font-body text-base text-[var(--color-jz-text-secondary)]"
-                  >
-                    <span className="shrink-0 text-[var(--color-jz-text-muted)]">·</span>
-                    {provider}
-                  </li>
-                ))}
-              </ul>
+          <div className="max-w-[1500px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-10">
+              <div>
+                <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
+                  Step 4 — Design Thinking
+                </p>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] leading-tight mb-6">
+                  Designing for Scalability
+                </h2>
+                <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-8">
+                  The workflow needed to be specific enough for NBA demands while remaining adaptive for
+                  other sports. Learning about Sportradar API keys provided insight into how other
+                  providers might structure data — enabling a flow that could theoretically tailor to any
+                  sports data provider.
+                </p>
+                <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
+                  Future Integration Plans
+                </p>
+                <ul className="space-y-3">
+                  {futureProviders.map((provider) => (
+                    <li key={provider} className="flex gap-3 font-body text-base text-[var(--color-jz-text-secondary)]">
+                      <span className="shrink-0 text-[var(--color-jz-text-muted)]">·</span>
+                      {provider}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex items-center">
+                <Image
+                  src="/images/sport.webp"
+                  alt="Sport selection in Graphic Editor"
+                  width={0}
+                  height={0}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ width: "100%", height: "auto" }}
+                  className="rounded-sm"
+                  unoptimized
+                />
+              </div>
             </div>
-            <div>
-              <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-                Sport Selection
-              </p>
-              <div className="bg-[var(--color-jz-bg)] border border-[var(--color-jz-border)] p-8 rounded-sm mb-6">
-                <p className="font-body text-base text-[var(--color-jz-text-secondary)] leading-relaxed">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-[var(--color-jz-bg)] border border-[var(--color-jz-border)] p-6 rounded-sm">
+                <p className="font-body text-xs uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
+                  Sport Selection
+                </p>
+                <p className="font-body text-sm text-[var(--color-jz-text-secondary)] leading-relaxed">
                   After selecting the Sportradar integration, users can choose from a list of sports —
                   making the architecture extensible beyond basketball from day one.
                 </p>
               </div>
-              <div className="bg-[var(--color-jz-bg)] border border-[var(--color-jz-border)] p-8 rounded-sm">
+              <div className="bg-[var(--color-jz-bg)] border border-[var(--color-jz-border)] p-6 rounded-sm">
                 <p className="font-body text-xs uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
                   Strategic Insight
                 </p>
-                <p className="font-body text-base text-[var(--color-jz-text-secondary)] leading-relaxed">
+                <p className="font-body text-sm text-[var(--color-jz-text-secondary)] leading-relaxed">
                   Understanding one provider&apos;s API structure created a mental model for how all
                   sports data providers work — turning an NBA-specific project into a scalable platform.
                 </p>
@@ -411,7 +449,7 @@ export default function NbaSportradarPage() {
             <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-jz-text)] mb-6 leading-tight">
               Final Design
             </h2>
-            <p className="font-body text-lg text-[var(--color-jz-text-secondary)] max-w-3xl leading-relaxed mb-12">
+            <p className="font-body text-lg text-[var(--color-jz-text-secondary)] max-w-3xl leading-relaxed mb-10">
               Using the API Map and knowledge from hands-on API key exploration, collaboration with
               front and back-end engineers created an{" "}
               <strong className="text-[var(--color-jz-text)]">
@@ -419,39 +457,59 @@ export default function NbaSportradarPage() {
               </strong>{" "}
               — parameter requirements making API calls in real time inside the Graphic Editor.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  step: "1",
-                  title: "Select Sportradar",
-                  body: "User selects the Sportradar integration option within the widget library.",
-                },
-                {
-                  step: "2",
-                  title: "Choose Parameters",
-                  body: "Select sport, then choose In-Game or Seasonal feed to surface relevant data types.",
-                },
-                {
-                  step: "3",
-                  title: "Import & Edit",
-                  body: "Real-time data populates the graphic — team colors, photos, and live stats ready to use.",
-                },
-              ].map((item) => (
-                <div
-                  key={item.step}
-                  className="border border-[var(--color-jz-border)] p-8 bg-[var(--color-jz-surface)] rounded-sm"
-                >
-                  <span className="font-display text-4xl font-bold text-[#f5e06b] block mb-4 leading-none">
-                    {item.step}
-                  </span>
-                  <h3 className="font-display text-xl font-bold text-[var(--color-jz-text)] mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="font-body text-base text-[var(--color-jz-text-secondary)] leading-relaxed">
-                    {item.body}
-                  </p>
-                </div>
-              ))}
+            <Image
+              src="/images/SR-final.webp"
+              alt="Final design — Sportradar integration in Graphic Editor"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
+              className="rounded-sm mb-8"
+              unoptimized
+            />
+            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 items-stretch">
+              <video
+                src="/videos/final.mov"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full rounded-sm"
+              />
+              <div className="flex flex-col gap-4 h-full justify-between">
+                {[
+                  {
+                    step: "1",
+                    title: "Select Sportradar",
+                    body: "User selects the Sportradar integration option within the widget library.",
+                  },
+                  {
+                    step: "2",
+                    title: "Choose Parameters",
+                    body: "Select sport, then choose In-Game or Seasonal feed to surface relevant data types.",
+                  },
+                  {
+                    step: "3",
+                    title: "Import & Edit",
+                    body: "Real-time data populates the graphic — team colors, photos, and live stats ready to use.",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.step}
+                    className="border border-[var(--color-jz-border)] p-6 bg-[var(--color-jz-surface)] rounded-sm flex-1"
+                  >
+                    <span className="font-display text-3xl font-bold text-[#f5e06b] block mb-2 leading-none">
+                      {item.step}
+                    </span>
+                    <h3 className="font-display text-lg font-bold text-[var(--color-jz-text)] mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="font-body text-sm text-[var(--color-jz-text-secondary)] leading-relaxed">
+                      {item.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -531,52 +589,6 @@ export default function NbaSportradarPage() {
                 interact with social media content, making it easier and more dynamic for broadcasters
                 and digital teams.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── Project Links ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
-          <div className="max-w-[1500px] mx-auto">
-            <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-              Learn More
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] mb-10 leading-tight">
-              Further Reading
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  label: "How-to Guide",
-                  title: "A How-to by Tagboard",
-                  desc: "Step-by-step walkthrough of the Sportradar integration inside Tagboard's Graphic Editor.",
-                },
-                {
-                  label: "Partnership",
-                  title: "Tagboard × Sportradar × NBA",
-                  desc: "Learn more about Tagboard's partnership with Sportradar through NBA Launchpad.",
-                },
-                {
-                  label: "Press",
-                  title: "Sports Business Journal",
-                  desc: "Read what Sports Business Journal had to say about the collaboration.",
-                },
-              ].map((link) => (
-                <div
-                  key={link.label}
-                  className="border border-[var(--color-jz-border)] p-8 bg-[var(--color-jz-surface)] rounded-sm"
-                >
-                  <p className="font-body text-xs uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-                    {link.label}
-                  </p>
-                  <h3 className="font-display text-lg font-bold text-[var(--color-jz-text)] mb-3">
-                    {link.title}
-                  </h3>
-                  <p className="font-body text-sm text-[var(--color-jz-text-secondary)] leading-relaxed">
-                    {link.desc}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
