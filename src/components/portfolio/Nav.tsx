@@ -17,7 +17,7 @@ const projectGroups = [
     href: "/tagboard",
     studies: [
       { title: "API Integration, Sportradar", href: "/nba-sportradar" },
-      { title: "Production Dashboard", href: "#" },
+      { title: "Production Dashboard", href: "/dashboard-redesign" },
       { title: "Analytics Dashboard", href: "#" },
       { title: "Micro-interactions", href: "#" },
       { title: "Google Sheet Integration", href: "#" },

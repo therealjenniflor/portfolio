@@ -30,7 +30,7 @@ const featured = [
     tags: ["Redesign", "B2B SaaS", "End-to-End"],
     description:
       "Enhancing informational architecture and improving the overall workflow for the Production Management Dashboard.",
-    href: "#",
+    href: "/dashboard-redesign",
     image: "/images/producer-redesign.png",
   },
   {

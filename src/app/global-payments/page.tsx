@@ -39,6 +39,20 @@ const projects = [
     image: "/images/hero-image.png",
     embed: null,
   },
+  {
+    number: "03",
+    company: "Global Payments",
+    launched: "2026",
+    title: "Multi Location Access",
+    tags: ["Multi-Account", "Admin Portal", "Authentication Flows"],
+    description:
+      "Designed the end-to-end multi-account experience for restaurant merchants managing multiple concepts under one login, including an account selection landing page, an admin portal account switcher, and user-to-account assignment flows.",
+    href: "/multi-location-access",
+    note: null,
+    video: null,
+    image: null,
+    embed: null,
+  },
 ];
 
 export default function GlobalPaymentsPage() {
