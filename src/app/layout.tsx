@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { playfairDisplay, workSans } from "@/lib/fonts";
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-[var(--color-jz-bg)] text-[var(--color-jz-text)]">
         {children}
+        <Analytics />
       </body>
     </html>
   );
