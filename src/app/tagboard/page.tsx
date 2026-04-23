@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Tagboard — JZ",
   description:
-    "Lead Product Designer at Tagboard — core tools for live content producers and broadcasters.",
+    "Lead Product Designer at Tagboard, designing core tools for live content producers and broadcasters.",
 };
 
 const featured = [
@@ -37,12 +37,12 @@ const featured = [
     number: "03",
     company: "Tagboard Inc.",
     launched: "2023",
-    title: "Analytics Dashboard",
-    tags: ["Data Viz", "UX Copy", "Cross-Functional Collab"],
+    title: "Google Sheet Integration",
+    tags: ["Data Integration", "UX", "Automation"],
     description:
-      "Providing and enabling users to effectively track and analyze QR code engagement and gather insights on user interactions and geographic distribution.",
-    href: "#",
-    image: "/images/analytics-thumbnail.png",
+      "Introducing Google Sheets to the graphic editor, optimizing the user experience by seamlessly automating data importation, and improving the process of launching their graphics on air.",
+    href: "/google-sheets",
+    image: "/images/google-intregration.png.png",
   },
 ];
 
@@ -57,11 +57,11 @@ const runnerUps = [
   },
   {
     launched: "2023",
-    title: "Google Sheet Integration",
+    title: "Analytics Dashboard",
     description:
-      "Introducing Google Sheets to the graphic editor, optimizing the user experience by seamlessly automating data importation, and improving the process of launching their graphics on air.",
+      "Providing and enabling users to effectively track and analyze QR code engagement and gather insights on user interactions and geographic distribution.",
     href: "#",
-    image: "/images/google-intregration.png.png",
+    image: "/images/analytics-thumbnail.png",
   },
   {
     launched: "2021",
@@ -169,8 +169,8 @@ export default function TagboardPage() {
           </div>
         </section>
 
-        {/* ─── Runner Ups ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        {/* ─── Runner Ups ─── (hidden, re-enable by removing the outer false && wrapper) */}
+        {false && <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-jz-text)] mb-3 leading-tight">
               Runner Ups
@@ -221,7 +221,19 @@ export default function TagboardPage() {
               ))}
             </div>
           </div>
-        </section>
+        </section>}
+
+        {/* ─── S-shape divider ─── */}
+        <div className="bg-[var(--color-jz-surface)] overflow-hidden" style={{ lineHeight: 0 }}>
+          <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block" style={{ height: '120px' }}>
+            <path
+              d="M0,100 C200,20 400,120 720,60 C1040,0 1240,100 1440,20"
+              fill="none"
+              stroke="#ffae00"
+              strokeWidth="3"
+            />
+          </svg>
+        </div>
 
         {/* ─── End CTA ─── */}
         <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-20 md:py-28">
@@ -239,28 +251,6 @@ export default function TagboardPage() {
               View Global Payments work →
             </Link>
 
-            <div className="border-t border-[var(--color-jz-border)] pt-14">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)] mb-8">
-                If you like what you see and want to chat:
-              </h3>
-              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-                <a
-                  href="mailto:jar.zaragoza91@gmail.com"
-                  className="inline-block font-body text-sm font-semibold px-8 py-4 border border-[var(--color-jz-text)] text-[var(--color-jz-text)] hover:bg-[var(--color-jz-text)] hover:text-[var(--color-jz-bg)] transition-colors duration-200"
-                >
-                  Email me →
-                </a>
-                <span className="font-body text-sm text-[var(--color-jz-text-muted)]">and / or</span>
-                <a
-                  href="https://www.linkedin.com/in/jarlenez/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block font-body text-sm font-semibold px-8 py-4 border border-[var(--color-jz-text)] text-[var(--color-jz-bg)] bg-[var(--color-jz-text)] hover:opacity-80 transition-opacity duration-200"
-                >
-                  Connect on LinkedIn →
-                </a>
-              </div>
-            </div>
           </div>
         </section>
 

@@ -13,12 +13,12 @@ const processSteps = [
   {
     number: "01",
     title: "Sportradar's API Map",
-    body: "Mapped Sportradar's API structure to guide design direction while back-end engineers gathered capability information. Key insight: to access main data sources, users needed only to input a date or specific season — which determined the entire user experience and flow.",
+    body: "Mapped Sportradar's API structure to guide design direction while back-end engineers gathered capability information. Key insight: to access main data sources, users needed only to input a date or specific season, which determined the entire user experience and flow.",
   },
   {
     number: "02",
     title: "Hands-On Data Exploration",
-    body: "Initial API map review wasn't enough. Using a test API key, I explored NBA data in Postman — player statistics, game outcomes, and team rankings. Close collaboration with the PM helped identify how data could be structured for users and design a workflow facilitating easy selection and previewing.",
+    body: "Initial API map review wasn't enough. Using a test API key, I explored NBA data in Postman: player statistics, game outcomes, and team rankings. Close collaboration with the PM helped identify how data could be structured for users and design a workflow facilitating easy selection and previewing.",
   },
   {
     number: "03",
@@ -28,7 +28,7 @@ const processSteps = [
   {
     number: "04",
     title: "Final Design & Engineer Collaboration",
-    body: "Using the API Map and knowledge from hands-on exploration, collaborated with front and back-end engineers to create an intuitive, functional way for users to filter the data they needed — enabling real-time parameter calls inside the Graphic Editor.",
+    body: "Using the API Map and knowledge from hands-on exploration, collaborated with front and back-end engineers to create an intuitive, functional way for users to filter the data they needed, enabling real-time parameter calls inside the Graphic Editor.",
   },
 ];
 
@@ -36,7 +36,7 @@ const learningCols = [
   {
     label: "Embracing Uncertainty",
     points: [
-      "Lack of complete API information led to design assumptions early on — and learning to work within that ambiguity was essential.",
+      "Lack of complete API information led to design assumptions early on, and learning to work within that ambiguity was essential.",
       "Designing with flexibility in mind allowed for rapid adaptation as new technical details emerged.",
       "Pivoting the design approach mid-project proved necessary to fully leverage growing product knowledge.",
     ],
@@ -131,7 +131,7 @@ export default function NbaSportradarPage() {
             <div>
               <Image
                 src="/images/API-SR.png"
-                alt="API Integration Sportradar — NBA Launchpad"
+                alt="API Integration Sportradar  -  NBA Launchpad"
                 width={0}
                 height={0}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -172,7 +172,7 @@ export default function NbaSportradarPage() {
                   &ldquo;Sportradar is the official data provider of NBA statistics.&rdquo;
                 </span>{" "}
                 For Tagboard&apos;s Graphic Editor, the Sportradar collaboration enhanced the NBA Launchpad
-                project — enriching basketball live games with real-time data.
+                project, enriching basketball live games with real-time data.
               </p>
               <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-6">
                 The integration allowed NBA teams and broadcasters to quickly import current data via API
@@ -180,7 +180,7 @@ export default function NbaSportradarPage() {
               </p>
               <p className="font-body text-sm text-[var(--color-jz-text-muted)] leading-relaxed">
                 <span className="font-medium text-[var(--color-jz-text-secondary)]">Credits:</span>{" "}
-                Engineering team (Lance Harper, Griffin Hammer, Craig Wills — VP of Engineering),
+                Engineering team (Lance Harper, Griffin Hammer, Craig Wills, VP of Engineering),
                 Product Manager Jenny Yang, VP of Product and Strategy Christine Chalk, and partners at
                 NBA and Sportradar.
               </p>
@@ -257,7 +257,7 @@ export default function NbaSportradarPage() {
             </div>
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-                Step 1 — Understanding Parameters
+                Step 1: Understanding Parameters
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] leading-tight mb-6">
                 Sportradar&apos;s API Map
@@ -292,7 +292,7 @@ export default function NbaSportradarPage() {
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-                Step 2 — Deep Dive
+                Step 2: Deep Dive
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] leading-tight mb-6">
                 Familiarizing with the Data
@@ -342,7 +342,7 @@ export default function NbaSportradarPage() {
                 output.&rdquo;
               </p>
               <cite className="font-body text-base text-[#8a9bb8] not-italic">
-                — Christine Chalk, SVP of Product and Strategy
+                Christine Chalk, SVP of Product and Strategy
               </cite>
             </blockquote>
           </div>
@@ -352,14 +352,14 @@ export default function NbaSportradarPage() {
         <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-              Step 3 — Selecting Parameters
+              Step 3: Selecting Parameters
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] leading-tight mb-10">
               Selecting Parameters
             </h2>
             <Image
               src="/images/parameters.webp"
-              alt="Graphic Editor modal — Selecting parameters"
+              alt="Graphic Editor modal  -  Selecting parameters"
               width={0}
               height={0}
               sizes="100vw"
@@ -381,7 +381,7 @@ export default function NbaSportradarPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-10">
               <div>
                 <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-                  Step 4 — Design Thinking
+                  Step 4: Design Thinking
                 </p>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] leading-tight mb-6">
                   Designing for Scalability
@@ -389,7 +389,7 @@ export default function NbaSportradarPage() {
                 <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-8">
                   The workflow needed to be specific enough for NBA demands while remaining adaptive for
                   other sports. Learning about Sportradar API keys provided insight into how other
-                  providers might structure data — enabling a flow that could theoretically tailor to any
+                  providers might structure data, enabling a flow that could theoretically tailor to any
                   sports data provider.
                 </p>
                 <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
@@ -423,7 +423,7 @@ export default function NbaSportradarPage() {
                   Sport Selection
                 </p>
                 <p className="font-body text-sm text-[var(--color-jz-text-secondary)] leading-relaxed">
-                  After selecting the Sportradar integration, users can choose from a list of sports —
+                  After selecting the Sportradar integration, users can choose from a list of sports,
                   making the architecture extensible beyond basketball from day one.
                 </p>
               </div>
@@ -433,7 +433,7 @@ export default function NbaSportradarPage() {
                 </p>
                 <p className="font-body text-sm text-[var(--color-jz-text-secondary)] leading-relaxed">
                   Understanding one provider&apos;s API structure created a mental model for how all
-                  sports data providers work — turning an NBA-specific project into a scalable platform.
+                  sports data providers work, turning an NBA-specific project into a scalable platform.
                 </p>
               </div>
             </div>
@@ -454,12 +454,12 @@ export default function NbaSportradarPage() {
               front and back-end engineers created an{" "}
               <strong className="text-[var(--color-jz-text)]">
                 intuitive, functional way for users to filter needed data
-              </strong>{" "}
-              — parameter requirements making API calls in real time inside the Graphic Editor.
+              </strong>
+              , with parameter requirements making API calls in real time inside the Graphic Editor.
             </p>
             <Image
               src="/images/SR-final.webp"
-              alt="Final design — Sportradar integration in Graphic Editor"
+              alt="Final design  -  Sportradar integration in Graphic Editor"
               width={0}
               height={0}
               sizes="100vw"
@@ -491,7 +491,7 @@ export default function NbaSportradarPage() {
                   {
                     step: "3",
                     title: "Import & Edit",
-                    body: "Real-time data populates the graphic — team colors, photos, and live stats ready to use.",
+                    body: "Real-time data populates the graphic: team colors, photos, and live stats ready to use.",
                   },
                 ].map((item) => (
                   <div
@@ -584,7 +584,7 @@ export default function NbaSportradarPage() {
             <div>
               <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed">
                 Beyond the NBA Launchpad, I also contributed to the launch of Tagboard&apos;s App
-                Marketplace — a groundbreaking initiative designed to expand and enhance real-time
+                Marketplace, a groundbreaking initiative designed to expand and enhance real-time
                 content curation and display capabilities. This project revolutionized how users
                 interact with social media content, making it easier and more dynamic for broadcasters
                 and digital teams.
@@ -593,31 +593,6 @@ export default function NbaSportradarPage() {
           </div>
         </section>
 
-        {/* ─── CTA ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
-          <div className="max-w-[1500px] mx-auto text-center">
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)] mb-8">
-              If you like what you see and want to chat:
-            </h3>
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <a
-                href="mailto:jar.zaragoza91@gmail.com"
-                className="inline-block font-body text-sm font-semibold px-8 py-4 border border-[var(--color-jz-text)] text-[var(--color-jz-text)] hover:bg-[var(--color-jz-text)] hover:text-[var(--color-jz-bg)] transition-colors duration-200"
-              >
-                Email me →
-              </a>
-              <span className="font-body text-sm text-[var(--color-jz-text-muted)]">and / or</span>
-              <a
-                href="https://www.linkedin.com/in/jarlenez/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block font-body text-sm font-semibold px-8 py-4 border border-[var(--color-jz-text)] text-[var(--color-jz-text)] hover:bg-[var(--color-jz-text)] hover:text-[var(--color-jz-bg)] transition-colors duration-200"
-              >
-                Connect on LinkedIn →
-              </a>
-            </div>
-          </div>
-        </section>
 
       </main>
       <Footer />

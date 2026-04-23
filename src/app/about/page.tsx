@@ -6,7 +6,7 @@ import Footer from "@/components/portfolio/Footer";
 export const metadata: Metadata = {
   title: "About me — JZ",
   description:
-    "Hi, I'm Jennifer Zaragoza — a Product Designer who went from vet med to crafting digital experiences.",
+    "Hi, I'm Jennifer Zaragoza, a Product Designer who went from vet med to crafting digital experiences.",
 };
 
 export default function AboutPage() {
@@ -14,7 +14,7 @@ export default function AboutPage() {
     <>
       <Nav />
       <main>
-        {/* ─── Hero — text left, portrait right ─── */}
+        {/* ─── Hero  -  text left, portrait right ─── */}
         <section className="px-6 md:px-10 pt-16 pb-0 md:pt-24" style={{ backgroundColor: '#1d1d1a' }}>
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
             {/* Left: text */}
@@ -34,7 +34,7 @@ export default function AboutPage() {
                 <span className="font-semibold text-white">&ldquo;why?&rdquo;</span>{" "}
                 and{" "}
                 <span className="font-semibold text-white">&ldquo;how?&rdquo;</span>{" "}
-                about everything. This has led me to develop a creative and purposeful approach to solving challenging problems—not surprising given my Biology/Chemistry background.
+                about everything. This has led me to develop a creative and purposeful approach to solving challenging problems, not surprising given my Biology/Chemistry background.
               </p>
               <a
                 href="mailto:jar.zaragoza91@gmail.com"
@@ -79,12 +79,12 @@ export default function AboutPage() {
 
             <div className="space-y-20 md:space-y-28 max-w-[1000px] mx-auto">
 
-              {/* Row 1 — image LEFT, text RIGHT */}
+              {/* Row 1  -  image LEFT, text RIGHT */}
               <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_1fr] gap-6 md:gap-10 items-start">
                 <div className="space-y-3">
                   <Image
                     src="/images/jz-art.png"
-                    alt="Watercolor painting by JZ — one of her favorite pieces"
+                    alt="Watercolor painting by JZ  -  one of her favorite pieces"
                     width={0}
                     height={0}
                     sizes="(max-width: 768px) 100vw, 400px"
@@ -103,12 +103,12 @@ export default function AboutPage() {
                     never limiting their capabilities and striving to learn new things.
                   </p>
                   <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-normal">
-                    Whether it&rsquo;s for work or personal, scary or fun, I&rsquo;m always looking for ways to level up. That is how I jumped from vet med to product design — I found a passion and wanted more. Most recently, I decided to pick up a brush and learned to watercolor.
+                    Whether it&rsquo;s for work or personal, scary or fun, I&rsquo;m always looking for ways to level up. That is how I jumped from vet med to product design: I found a passion and wanted more. Most recently, I decided to pick up a brush and learned to watercolor.
                   </p>
                 </div>
               </div>
 
-              {/* Row 2 — text LEFT, image RIGHT */}
+              {/* Row 2  -  text LEFT, image RIGHT */}
               <div className="grid grid-cols-1 md:grid-cols-[1fr_minmax(0,420px)] gap-6 md:gap-10 items-start">
                 <div className="space-y-5 self-center md:order-1 order-2 max-w-[520px]">
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)]">
@@ -140,7 +140,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Row 3 — image LEFT, text RIGHT */}
+              {/* Row 3  -  image LEFT, text RIGHT */}
               <div className="grid grid-cols-1 md:grid-cols-[minmax(0,420px)_1fr] gap-6 md:gap-10 items-start">
                 <div className="space-y-3">
                   <Image

@@ -8,20 +8,18 @@ const projectGroups = [
     label: "Global Payments",
     href: "/global-payments",
     studies: [
-      { title: "Checkout Flow Redesign", href: "/pos-redesign" },
-      { title: "Deposit Threshold", href: "/deposit-threshold" },
+      { title: "Checkout Flow Redesign", href: "/pos-redesign", locked: false },
+      { title: "Multi-Location Access", href: "/multi-location-access", locked: true },
+      { title: "Deposit Threshold", href: "/deposit-threshold", locked: false },
     ],
   },
   {
     label: "Tagboard",
     href: "/tagboard",
     studies: [
-      { title: "API Integration, Sportradar", href: "/nba-sportradar" },
-      { title: "Production Dashboard", href: "/dashboard-redesign" },
-      { title: "Analytics Dashboard", href: "#" },
-      { title: "Micro-interactions", href: "#" },
-      { title: "Google Sheet Integration", href: "#" },
-      { title: "Style Guide", href: "#" },
+      { title: "API Integration, Sportradar", href: "/nba-sportradar", locked: false },
+      { title: "Production Dashboard", href: "/dashboard-redesign", locked: false },
+      { title: "Google Sheet Integration", href: "/google-sheets", locked: false },
     ],
   },
 ];
@@ -111,7 +109,7 @@ export default function Nav() {
                         </svg>
                       </button>
                     </div>
-                    {/* Case studies — shown only when expanded */}
+                    {/* Case studies  -  shown only when expanded */}
                     {openGroup === group.label && (
                       <div className="pb-1">
                         {group.studies.map((study) => (
@@ -119,12 +117,18 @@ export default function Nav() {
                             key={study.title}
                             href={study.href}
                             onClick={() => setProjectsOpen(false)}
-                            className={`block pl-6 pr-4 py-2 font-body text-sm transition-colors duration-150 ${
+                            className={`relative block pl-6 pr-4 py-2 font-body text-sm transition-colors duration-150 ${
                               pathname === study.href
                                 ? "text-[var(--color-jz-text)] bg-[var(--color-jz-surface)]"
                                 : "text-[var(--color-jz-text-secondary)] hover:text-[var(--color-jz-text)] hover:bg-[var(--color-jz-surface)]"
                             }`}
                           >
+                            {study.locked && (
+                              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" className="absolute left-2 top-1/2 -translate-y-1/2 opacity-40">
+                                <rect x="2" y="5" width="8" height="6" rx="1" stroke="currentColor" strokeWidth="1.3"/>
+                                <path d="M4 5V3.5a2 2 0 1 1 4 0V5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+                              </svg>
+                            )}
                             {study.title}
                           </Link>
                         ))}
@@ -132,6 +136,21 @@ export default function Nav() {
                     )}
                   </div>
                 ))}
+
+                {/* Project Untaboo  -  single direct link at bottom */}
+                <div className="border-t border-pink-100">
+                  <Link
+                    href="/project-untaboo"
+                    onClick={() => setProjectsOpen(false)}
+                    className={`block px-4 py-3 font-body text-xs font-semibold uppercase tracking-widest transition-colors ${
+                      pathname === "/project-untaboo"
+                        ? "text-[var(--color-jz-text)]"
+                        : "text-[var(--color-jz-text)] hover:text-[var(--color-jz-accent)]"
+                    }`}
+                  >
+                    Project Untaboo
+                  </Link>
+                </div>
               </div>
             )}
           </div>
@@ -147,7 +166,7 @@ export default function Nav() {
             About
           </Link>
           <a
-            href="/s/JenniferZaragozaResume-fxcl.pdf"
+            href="/JZ.Resume.2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-sm font-medium text-[var(--color-jz-text-secondary)] hover:text-[var(--color-jz-text)] transition-colors duration-200"
@@ -209,9 +228,15 @@ export default function Nav() {
                           <Link
                             key={study.title}
                             href={study.href}
-                            className="font-body text-sm text-[var(--color-jz-text-muted)] hover:text-[var(--color-jz-accent)] py-1.5 transition-colors"
+                            className="relative block font-body text-sm text-[var(--color-jz-text-muted)] hover:text-[var(--color-jz-accent)] py-1.5 pl-4 transition-colors"
                             onClick={() => setMenuOpen(false)}
                           >
+                            {study.locked && (
+                              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" className="absolute left-0 top-1/2 -translate-y-1/2 opacity-40">
+                                <rect x="2" y="5" width="8" height="6" rx="1" stroke="currentColor" strokeWidth="1.3"/>
+                                <path d="M4 5V3.5a2 2 0 1 1 4 0V5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+                              </svg>
+                            )}
                             {study.title}
                           </Link>
                         ))}
@@ -219,6 +244,15 @@ export default function Nav() {
                     )}
                   </div>
                 ))}
+
+                {/* Project Untaboo  -  single direct link */}
+                <Link
+                  href="/project-untaboo"
+                  className="font-body text-xs font-semibold uppercase tracking-widest text-[var(--color-jz-text-secondary)] hover:text-[var(--color-jz-accent)] py-1.5 transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Project Untaboo
+                </Link>
               </div>
             )}
           </div>
@@ -231,7 +265,7 @@ export default function Nav() {
             About
           </Link>
           <a
-            href="/s/JenniferZaragozaResume-fxcl.pdf"
+            href="/JZ.Resume.2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-base font-medium text-[var(--color-jz-text)] hover:text-[var(--color-jz-accent)] transition-colors py-2"

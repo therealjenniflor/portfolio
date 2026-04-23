@@ -28,6 +28,20 @@ const projects = [
   {
     number: "02",
     company: "Global Payments",
+    launched: "2026",
+    title: "Multi Location Access",
+    tags: ["Back Office", "Desktop", "Mobile (handheld)"],
+    description:
+      "Designed the end-to-end multi-account experience for restaurant merchants managing multiple concepts under one login, including an account selection landing page, an admin portal account switcher, and user-to-account assignment flows.",
+    href: "/multi-location-access",
+    note: "🔒 Password protected — request access from JZ",
+    video: null,
+    image: "/images/multi_location/multi_location_casestudy.png",
+    embed: null,
+  },
+  {
+    number: "03",
+    company: "Global Payments",
     launched: "2024",
     title: "Deposit Threshold",
     tags: ["Admin Tooling", "Systems Thinking", "Scalable Workflows"],
@@ -37,20 +51,6 @@ const projects = [
     note: "Best viewed on desktop",
     video: null,
     image: "/images/hero-image.png",
-    embed: null,
-  },
-  {
-    number: "03",
-    company: "Global Payments",
-    launched: "2026",
-    title: "Multi Location Access",
-    tags: ["Multi-Account", "Admin Portal", "Authentication Flows"],
-    description:
-      "Designed the end-to-end multi-account experience for restaurant merchants managing multiple concepts under one login, including an account selection landing page, an admin portal account switcher, and user-to-account assignment flows.",
-    href: "/multi-location-access",
-    note: null,
-    video: null,
-    image: null,
     embed: null,
   },
 ];
@@ -195,28 +195,6 @@ export default function GlobalPaymentsPage() {
               View Tagboard work →
             </Link>
 
-            <div className="border-t border-[var(--color-jz-border)] pt-14">
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)] mb-8">
-                If you like what you see and want to chat:
-              </h3>
-              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-                <a
-                  href="mailto:jar.zaragoza91@gmail.com"
-                  className="inline-block font-body text-sm font-semibold px-8 py-4 border border-[var(--color-jz-text)] text-[var(--color-jz-text)] hover:bg-[var(--color-jz-text)] hover:text-[var(--color-jz-bg)] transition-colors duration-200"
-                >
-                  Email me →
-                </a>
-                <span className="font-body text-sm text-[var(--color-jz-text-muted)]">and / or</span>
-                <a
-                  href="https://www.linkedin.com/in/jarlenez/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block font-body text-sm font-semibold px-8 py-4 border border-[var(--color-jz-text)] text-[var(--color-jz-bg)] bg-[var(--color-jz-text)] hover:opacity-80 transition-opacity duration-200"
-                >
-                  Connect on LinkedIn →
-                </a>
-              </div>
-            </div>
           </div>
         </section>
 

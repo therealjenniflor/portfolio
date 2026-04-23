@@ -82,7 +82,7 @@ export default function PosRedesignPage() {
         {/* ─── Hero ─── */}
         <section className={`${c.surface} px-6 md:px-10 pt-16 pb-12 md:pt-24 md:pb-16`}>
 
-          {/* Label + Title — left-aligned, above embed */}
+          {/* Label + Title  -  left-aligned, above embed */}
           <div className="max-w-[1500px] mx-auto mb-10">
             <p className={`font-body text-sm uppercase tracking-widest ${c.label} mb-4`}>
               <span className="font-bold">Global Payments</span>
@@ -97,16 +97,16 @@ export default function PosRedesignPage() {
           <div className="max-w-[1500px] mx-auto mb-12">
             <iframe
               src="/pos_mockup.html"
-              title="Checkout Flow Redesign — Interactive Demo"
+              title="Checkout Flow Redesign  -  Interactive Demo"
               className="w-full rounded-sm"
               style={{ height: "580px", border: "none" }}
             />
           </div>
 
-          {/* Text below embed — centered */}
+          {/* Text below embed  -  centered */}
           <div className="max-w-[1500px] mx-auto text-center">
             <p className={`font-body text-xl md:text-2xl ${c.textSec} mb-4`}>
-              &ldquo;Tips Were Dropping — eeeek!&rdquo;
+              &ldquo;Tips Were Dropping... eeeek!&rdquo;
             </p>
             <p className={`font-body text-lg md:text-xl font-semibold ${c.text} mb-8`}>
               So We Redesigned the Moment That Matters
@@ -204,7 +204,7 @@ export default function PosRedesignPage() {
                     className="grid grid-cols-1 gap-10 md:gap-16 items-center"
                     style={{ gridTemplateColumns: isOdd ? "55% 45%" : "45% 55%" }}
                   >
-                    {/* Image — circular */}
+                    {/* Image  -  circular */}
                     <div className={`flex items-center justify-center ${isOdd ? "md:order-2" : ""}`}>
                       <div className="rounded-full overflow-hidden aspect-square w-full max-w-sm">
                         <Image
@@ -273,7 +273,7 @@ export default function PosRedesignPage() {
               </p>
               <Image
                 src="/images/person-doc.png"
-                alt="User Persona — Alex Torres"
+                alt="User Persona  -  Alex Torres"
                 width={0}
                 height={0}
                 sizes="100vw"
@@ -413,7 +413,7 @@ export default function PosRedesignPage() {
                 <ul className="space-y-4 text-[#c8bfb0] font-body text-sm leading-relaxed list-none">
                   <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I strengthened my ability to <strong className="text-[#f5f0e8]">delegate tasks</strong> and lead cross-functional efforts across design and product.</span></li>
                   <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I improved how I <strong className="text-[#f5f0e8]">collaborate with product managers</strong>, creating clarity on goals and alignment across verticals.</span></li>
-                  <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I developed more confidence in making fast, informed decisions—even without formal user interviews—by leaning into internal insights and customer-facing teams.</span></li>
+                  <li className="flex gap-2"><span className="mt-1 shrink-0 text-[#8a7a60]">·</span><span>I developed more confidence in making fast, informed decisions, even without formal user interviews, by leaning into internal insights and customer-facing teams.</span></li>
                 </ul>
               </div>
 

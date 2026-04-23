@@ -161,13 +161,13 @@ export default function DepositThresholdPage() {
               </h2>
               <p className="font-body text-base text-[var(--color-jz-text-secondary)] leading-relaxed">
                 A tiny tweak, a massive impact. By reusing a proven component, we made the flow effortless
-                for merchants and seamless for customers — proof that the simplest UI changes can drive the biggest wins.
+                for merchants and seamless for customers, proof that the simplest UI changes can drive the biggest wins.
               </p>
             </div>
             <div>
               <Image
                 src="/images/hero-image.png"
-                alt="Deposit Threshold — Hero"
+                alt="Deposit Threshold  -  Hero"
                 width={0}
                 height={0}
                 sizes="(max-width: 768px) 100vw, 60vw"
@@ -403,11 +403,11 @@ export default function DepositThresholdPage() {
         <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto space-y-24">
 
-            {/* Row 1 — image left, text right */}
+            {/* Row 1  -  image left, text right */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <Image
                 src="/images/reuse-repurpose.png"
-                alt="Finding the opportunity — existing POS component"
+                alt="Finding the opportunity  -  existing POS component"
                 width={0} height={0} sizes="50vw"
                 style={{ width: "100%", height: "auto" }}
                 className="rounded-sm"
@@ -420,12 +420,12 @@ export default function DepositThresholdPage() {
                 <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed">
                   While reviewing the existing POS flow, I noticed we already had a clear, user-friendly
                   payment component. Instead of creating something entirely new, I proposed adapting it
-                  for the deposit flow — saving weeks of design and dev work.
+                  for the deposit flow, saving weeks of design and dev work.
                 </p>
               </div>
             </div>
 
-            {/* Row 2 — text left, image right */}
+            {/* Row 2  -  text left, image right */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div className="md:order-1">
                 <h3 className="font-display text-2xl md:text-3xl font-bold text-[#c8823c] mb-4">
@@ -439,7 +439,7 @@ export default function DepositThresholdPage() {
               </div>
               <Image
                 src="/images/applying-solution.png"
-                alt="Applying the solution — deposit modal"
+                alt="Applying the solution  -  deposit modal"
                 width={0} height={0} sizes="50vw"
                 style={{ width: "100%", height: "auto" }}
                 className="rounded-sm md:order-2"
@@ -475,7 +475,7 @@ export default function DepositThresholdPage() {
               </h3>
               <Image
                 src="/images/cashier-sees.png"
-                alt="Final design — cashier view"
+                alt="Final design  -  cashier view"
                 width={0} height={0} sizes="100vw"
                 style={{ width: "100%", height: "auto" }}
                 className="rounded-sm"
@@ -490,7 +490,7 @@ export default function DepositThresholdPage() {
               </h3>
               <Image
                 src="/images/customer-sees.png"
-                alt="Final design — customer-facing display"
+                alt="Final design  -  customer-facing display"
                 width={0} height={0} sizes="100vw"
                 style={{ width: "100%", height: "auto" }}
                 className="rounded-sm"
@@ -542,31 +542,6 @@ export default function DepositThresholdPage() {
           </div>
         </section>
 
-        {/* ─── CTA ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
-          <div className="max-w-[1500px] mx-auto text-center">
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-[var(--color-jz-text)] mb-8">
-              If you like what you see and want to chat:
-            </h3>
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <a
-                href="mailto:jar.zaragoza91@gmail.com"
-                className="inline-block font-body text-sm font-semibold px-8 py-4 border border-[var(--color-jz-text)] text-[var(--color-jz-text)] hover:bg-[var(--color-jz-text)] hover:text-[var(--color-jz-bg)] transition-colors duration-200"
-              >
-                Email me →
-              </a>
-              <span className="font-body text-sm text-[var(--color-jz-text-muted)]">and / or</span>
-              <a
-                href="https://www.linkedin.com/in/jarlenez/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block font-body text-sm font-semibold px-8 py-4 border border-[var(--color-jz-text)] text-[var(--color-jz-text)] hover:bg-[var(--color-jz-text)] hover:text-[var(--color-jz-bg)] transition-colors duration-200"
-              >
-                Connect on LinkedIn →
-              </a>
-            </div>
-          </div>
-        </section>
 
       </main>
       <Footer />

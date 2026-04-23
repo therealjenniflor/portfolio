@@ -7,14 +7,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Production Dashboard — JZ",
   description:
-    "End-to-end redesign of Tagboard's Production Management Dashboard — improving information architecture and streamlining workflows for live content producers.",
+    "End-to-end redesign of Tagboard's Production Management Dashboard, improving information architecture and streamlining workflows for live content producers.",
 };
 
 const learningCols = [
   {
     label: "Redesigning Under Constraints",
     points: [
-      "The existing dashboard had years of feature accumulation — every element had a stakeholder. Navigating that required diplomacy as much as design judgment.",
+      "The existing dashboard had years of feature accumulation; every element had a stakeholder. Navigating that required diplomacy as much as design judgment.",
       "Shipping incrementally rather than all at once meant designs had to be backward-compatible with existing workflows.",
       "Constraints forced creative prioritization: deciding what not to show was often harder than deciding what to show.",
     ],
@@ -23,16 +23,16 @@ const learningCols = [
     label: "What I Learned",
     points: [
       "Observing real producers in live broadcast environments revealed pain points no survey would have surfaced.",
-      "Information architecture work is invisible when done well — users just feel like the tool 'makes sense.'",
+      "Information architecture work is invisible when done well; users just feel like the tool 'makes sense.'",
       "Bringing engineers into discovery sessions early shortened the feedback loop and prevented costly design pivots late in the process.",
     ],
   },
   {
     label: "Design Philosophy",
     points: [
-      "Clarity over cleverness — in high-stakes live environments, producers need confidence, not novelty.",
+      "Clarity over cleverness: in high-stakes live environments, producers need confidence, not novelty.",
       "Every extra click in a live production is a liability. Speed and predictability are features.",
-      "A great dashboard disappears — the producer's focus should be on the show, not on navigating software.",
+      "A great dashboard disappears: the producer's focus should be on the show, not on navigating software.",
     ],
   },
 ];
@@ -42,7 +42,7 @@ const newFeatures = [
     number: "1.",
     title: "Improving Organization",
     image: "/images/producer-issue1.webp",
-    alt: "Improving Organization — dashboard grid layout",
+    alt: "Improving Organization  -  dashboard grid layout",
     points: [
       { plain: "Changing layout to a grid, allowed for ", bold: "easier visual scanning", rest: "." },
       { plain: "Introduced ", bold: "double-click functionality", rest: " to enter production." },
@@ -54,7 +54,7 @@ const newFeatures = [
     number: "2.",
     title: "Streamlining Production Creation",
     image: "/images/producer-issue2.webp",
-    alt: "Streamlining Production Creation — new production modal",
+    alt: "Streamlining Production Creation  -  new production modal",
     points: [
       { plain: "Adding a modal to the ", bold: "workflow prompting user", rest: " to add a name for the new production." },
       { plain: "If users do not belong to a team, remove option.", bold: null, rest: "" },
@@ -66,7 +66,7 @@ const newFeatures = [
     number: "3.",
     title: "Enhancing Information Display",
     image: "/images/producer-issue3.webp",
-    alt: "Enhancing Information Display — right panel metadata",
+    alt: "Enhancing Information Display  -  right panel metadata",
     points: [
       { plain: "", bold: "Upon single click:", rest: " A right panel opens to display important meta data for each item to help with creation and edit history." },
       { plain: "Output status to let users know which production is \u201cLive\u201d and \u201cOn-Air\u201d so they ", bold: "do not enter during air time.", rest: "" },
@@ -77,7 +77,7 @@ const newFeatures = [
     number: "4.",
     title: "Improving Production Management",
     image: "/images/producer-issue4.webp",
-    alt: "Improving Production Management — deleted productions view",
+    alt: "Improving Production Management  -  deleted productions view",
     points: [
       { plain: "Option to ", bold: "delete productions", rest: " to keep unused or old productions out of view." },
       { plain: "Restore feature with ", bold: "30 day notice for accidental deletions", rest: " and better management." },
@@ -103,7 +103,7 @@ export default function DashboardRedesignPage() {
                 <span className="text-2xl md:text-3xl font-semibold text-[var(--color-jz-text-secondary)] block mt-2">Redesign · 2022</span>
               </h1>
               <p className="font-body text-xl md:text-2xl text-[var(--color-jz-text-secondary)] leading-relaxed mb-4">
-                End-to-end redesign of the Production Management Dashboard — enhancing information architecture and streamlining the live broadcast workflow.
+                End-to-end redesign of the Production Management Dashboard, enhancing information architecture and streamlining the live broadcast workflow.
               </p>
               <p className="font-body text-sm text-[var(--color-jz-text-muted)] italic max-w-2xl">
                 Due to Non-Disclosure Agreements, specific details and visuals from this project are omitted to maintain confidentiality.
@@ -112,7 +112,7 @@ export default function DashboardRedesignPage() {
             <div>
               <Image
                 src="/images/producer-hero-casestudy.webp"
-                alt="Production Dashboard Redesign — Tagboard"
+                alt="Production Dashboard Redesign  -  Tagboard"
                 width={0}
                 height={0}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -153,14 +153,14 @@ export default function DashboardRedesignPage() {
             </div>
             <div>
               <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-6">
-                Tagboard&apos;s Production Dashboard is the nerve center for live content producers —
+                Tagboard&apos;s Production Dashboard is the nerve center for live content producers:
                 the tool they use to manage, schedule, and push graphics to screen during broadcasts.
                 As the product scaled, the dashboard had accumulated{" "}
                 <strong className="text-[var(--color-jz-text)]">years of features without a unifying structure</strong>,
                 leaving producers navigating a cluttered interface under the pressure of live production.
               </p>
               <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-6">
-                I led the end-to-end redesign — from initial discovery and user research through final
+                I led the end-to-end redesign, from initial discovery and user research through final
                 design handoff. The goal was to restructure the information architecture and rebuild
                 the interface so that it reflected how producers actually work, not just how features
                 had been bolted on over time.
@@ -193,7 +193,7 @@ export default function DashboardRedesignPage() {
 
             <Image
               src="/images/producer-before.webp"
-              alt="Production Dashboard — before redesign"
+              alt="Production Dashboard  -  before redesign"
               width={0}
               height={0}
               sizes="100vw"
@@ -208,7 +208,7 @@ export default function DashboardRedesignPage() {
         <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-              Process — Step 01
+              Process: Step 01
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-jz-text)] mb-12 leading-tight">
               Audit &amp; Discovery
@@ -217,7 +217,7 @@ export default function DashboardRedesignPage() {
               <div>
                 <Image
                   src="/images/producer-audit.webp"
-                  alt="Dashboard audit — cataloging components and screen states"
+                  alt="Dashboard audit  -  cataloging components and screen states"
                   width={0}
                   height={0}
                   sizes="(max-width: 768px) 100vw, 66vw"
@@ -228,7 +228,7 @@ export default function DashboardRedesignPage() {
               </div>
               <div className="flex flex-col justify-center">
                 <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-6">
-                  Conducted a full audit of the existing dashboard — cataloging every component,
+                  Conducted a full audit of the existing dashboard, cataloging every component,
                   interaction, and screen state. Paired with stakeholder interviews and session
                   recordings to map where producers were losing time and where critical information
                   was buried.
@@ -255,7 +255,7 @@ export default function DashboardRedesignPage() {
         <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-              Process — Step 02
+              Process: Step 02
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-jz-text)] mb-12 leading-tight">
               User Interviews &amp; Personas
@@ -268,7 +268,7 @@ export default function DashboardRedesignPage() {
                   the most-used controls were the least accessible.
                 </p>
                 <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed">
-                  These sessions directly shaped the new information hierarchy — and exposed that
+                  These sessions directly shaped the new information hierarchy, and exposed that
                   different producer types had meaningfully different needs within the same tool.
                 </p>
               </div>
@@ -358,7 +358,7 @@ export default function DashboardRedesignPage() {
           <div className="max-w-[1500px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-12 md:gap-20 items-start">
 
-              {/* Left — heading + intro */}
+              {/* Left  -  heading + intro */}
               <div className="md:sticky md:top-24">
                 <p className="font-body text-xs uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
                   Discovery
@@ -372,7 +372,7 @@ export default function DashboardRedesignPage() {
                 </p>
               </div>
 
-              {/* Right — problem statements as cards */}
+              {/* Right  -  problem statements as cards */}
               <div>
                 <p className="font-body text-xs font-semibold uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-6">
                   Problem Statements
@@ -424,9 +424,9 @@ export default function DashboardRedesignPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { src: "/images/producer-mid1.webp", alt: "Mid-fidelity wireframe — dashboard overview" },
-                { src: "/images/producer-mid2.webp", alt: "Mid-fidelity wireframe — new production modal" },
-                { src: "/images/producer-mid3.webp", alt: "Mid-fidelity wireframe — expanded nav" },
+                { src: "/images/producer-mid1.webp", alt: "Mid-fidelity wireframe  -  dashboard overview" },
+                { src: "/images/producer-mid2.webp", alt: "Mid-fidelity wireframe  -  new production modal" },
+                { src: "/images/producer-mid3.webp", alt: "Mid-fidelity wireframe  -  expanded nav" },
               ].map((item) => (
                 <div key={item.src} className="overflow-hidden rounded-sm border border-[var(--color-jz-border)]">
                   <Image
@@ -448,13 +448,13 @@ export default function DashboardRedesignPage() {
         <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
-              The Approach — Information Architecture
+              The Approach: Information Architecture
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-jz-text)] leading-tight mb-6">
               Restructuring for How Producers Think
             </h2>
             <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-12 max-w-3xl">
-              The old dashboard was organized around how the software was built — by feature category.
+              The old dashboard was organized around how the software was built, by feature category.
               The new structure was organized around{" "}
               <strong className="text-[var(--color-jz-text)]">how producers work</strong>:{" "}
               pre-show setup, live management, and post-show review.
@@ -464,7 +464,7 @@ export default function DashboardRedesignPage() {
                 <div className="overflow-hidden">
                   <Image
                     src="/images/producer-before.webp"
-                    alt="Production Dashboard — before redesign"
+                    alt="Production Dashboard  -  before redesign"
                     width={0}
                     height={0}
                     sizes="50vw"
@@ -474,14 +474,14 @@ export default function DashboardRedesignPage() {
                 </div>
                 <div className="p-8 border-t border-[var(--color-jz-border)]">
                   <p className="font-body text-xs uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-2">Before</p>
-                  <p className="font-body text-base text-[var(--color-jz-text-secondary)]">Features grouped by type — all options visible at once, flat undifferentiated hierarchy.</p>
+                  <p className="font-body text-base text-[var(--color-jz-text-secondary)]">Features grouped by type, all options visible at once, flat undifferentiated hierarchy.</p>
                 </div>
               </div>
               <div className="bg-[var(--color-jz-surface)]">
                 <div className="overflow-hidden">
                   <Image
                     src="/images/producer-after.webp"
-                    alt="Production Dashboard — after redesign"
+                    alt="Production Dashboard  -  after redesign"
                     width={0}
                     height={0}
                     sizes="50vw"
@@ -491,7 +491,7 @@ export default function DashboardRedesignPage() {
                 </div>
                 <div className="p-8 border-t border-[var(--color-jz-accent)]" style={{ borderTopWidth: "3px" }}>
                   <p className="font-body text-xs uppercase tracking-widest text-[var(--color-jz-accent)] mb-2">After</p>
-                  <p className="font-body text-base text-[var(--color-jz-text-secondary)]">Controls grouped by workflow stage — progressive disclosure, clear primary and secondary actions.</p>
+                  <p className="font-body text-base text-[var(--color-jz-text-secondary)]">Controls grouped by workflow stage, with progressive disclosure, clear primary and secondary actions.</p>
                 </div>
               </div>
             </div>
@@ -533,12 +533,12 @@ export default function DashboardRedesignPage() {
                   {
                     label: "Pain Point 02",
                     title: "Creating for the Wrong Teams",
-                    body: "Users frequently created productions under the wrong team account, requiring Client Success intervention to resolve — adding friction and delay.",
+                    body: "Users frequently created productions under the wrong team account, requiring Client Success intervention to resolve, adding friction and delay.",
                   },
                   {
                     label: "Pain Point 03",
                     title: "Production Ownership",
-                    body: "Without clear metadata, users couldn't identify who created or last modified a production — making collaboration and editing error-prone.",
+                    body: "Without clear metadata, users couldn't identify who created or last modified a production, making collaboration and editing error-prone.",
                   },
                 ].map((card) => (
                   <div key={card.title} className="bg-[var(--color-jz-bg)] p-10">
