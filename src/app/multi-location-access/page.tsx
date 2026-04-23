@@ -122,8 +122,8 @@ export default function MultiLocationAccessPage() {
             </div>
             <div className="rounded-sm overflow-hidden">
               <Image
-                src="/images/multi_location/multi-location-dashboard/Accounts + Locations-1.png"
-                alt="Admin portal showing All Accounts + Locations switcher in the top nav"
+                src="/images/multi_location/multi-location-dashboard/locations-hero.png"
+                alt="Multi-Location Access hero"
                 width={0}
                 height={0}
                 sizes="50vw"
