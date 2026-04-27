@@ -101,14 +101,18 @@ const learningCols = [
   },
 ];
 
-function YellowWaveDivider({ bgTop }: { bgTop: string; bgBottom: string }) {
+function WaveDivider(_props: { bgTop: string; bgBottom: string }) {
   return (
-    <div className="overflow-hidden leading-none" style={{ backgroundColor: bgTop }}>
-      <svg viewBox="0 0 1440 50" preserveAspectRatio="none" className="w-full block" style={{ height: "50px" }}>
+    <div style={{ height: 0, overflow: "visible", position: "relative", zIndex: 1 }}>
+      <svg
+        viewBox="0 0 1440 60"
+        preserveAspectRatio="none"
+        style={{ width: "100%", height: "60px", position: "absolute", top: "-30px", left: 0 }}
+      >
         <path
-          d="M0,38 C240,8 480,48 720,25 C960,4 1200,44 1440,16"
+          d="M0,30 C240,6 480,54 720,30 C960,6 1200,54 1440,24"
           fill="none"
-          stroke="#EAFF8C"
+          stroke="#D4579B"
           strokeWidth="2"
         />
       </svg>
@@ -250,7 +254,7 @@ export default function HangwithjzPage() {
           </div>
         </section>
 
-        <YellowWaveDivider bgTop="#fff5f9" bgBottom="#fdeef4" />
+        <WaveDivider bgTop="#fff5f9" bgBottom="#fdeef4" />
 
         {/* ─── Business Goals ─── */}
         <section className="bg-[#fdeef4] px-6 md:px-10 py-16 md:py-24">
@@ -376,7 +380,7 @@ export default function HangwithjzPage() {
           </div>
         </section>
 
-        <YellowWaveDivider bgTop="#fff5f9" bgBottom="#fff5f9" />
+        <WaveDivider bgTop="#fff5f9" bgBottom="#fff5f9" />
 
         {/* ─── JSON Data Layer ─── */}
         <section className="bg-[#fff5f9] px-6 md:px-10 py-20 md:py-28">
@@ -464,7 +468,7 @@ export default function HangwithjzPage() {
           </div>
         </section>
 
-        <YellowWaveDivider bgTop="#fdeef4" bgBottom="#f9d5e8" />
+        <WaveDivider bgTop="#fdeef4" bgBottom="#f9d5e8" />
 
         {/* ─── Learnings ─── */}
         <section className="bg-[#f9d5e8] overflow-hidden py-16 md:py-24">
