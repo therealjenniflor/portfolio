@@ -300,6 +300,116 @@ function CompanySection({
   );
 }
 
+function HangwithjzPreview() {
+  return (
+    <div style={{ background: "#0A0A0A", padding: "18px 20px 0", overflow: "hidden" }}>
+      {/* Browser chrome */}
+      <div
+        style={{
+          background: "#1a1a1a",
+          borderRadius: "6px 6px 0 0",
+          padding: "7px 12px",
+          display: "flex",
+          alignItems: "center",
+          gap: "6px",
+        }}
+      >
+        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#ff5f57" }} />
+        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#ffbd2e" }} />
+        <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#28ca41" }} />
+        <div
+          style={{
+            flex: 1,
+            background: "#2a2a2a",
+            borderRadius: 4,
+            padding: "3px 8px",
+            fontSize: 9,
+            color: "#666",
+            margin: "0 8px",
+            textAlign: "center",
+          }}
+        >
+          hangwithjz.com
+        </div>
+      </div>
+
+      {/* Site header */}
+      <div style={{ background: "#0d0d0d", padding: "10px 12px" }}>
+        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+          <div
+            style={{
+              width: 36,
+              height: 36,
+              borderRadius: 6,
+              background: "#2a2a2a",
+              flexShrink: 0,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: 16,
+            }}
+          >
+            👩🏻
+          </div>
+          <div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, lineHeight: 1.2 }}>
+              <span style={{ color: "#EAFF8C" }}>JZ</span>
+              <span style={{ color: "#444" }}> | </span>
+              <span style={{ color: "#EAFF8C" }}>Picks & Recs</span>
+            </div>
+            <div style={{ fontSize: 8, color: "#666", marginTop: 2 }}>
+              Fitness · Wellness · Beauty · Discount codes included
+            </div>
+            <div style={{ display: "flex", gap: 4, marginTop: 4 }}>
+              {[0, 1, 2].map((i) => (
+                <div key={i} style={{ width: 12, height: 12, background: "#333", borderRadius: 2 }} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Product mini-cards */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: 5,
+          padding: "0 12px 10px",
+          background: "#0d0d0d",
+        }}
+      >
+        {[
+          { emoji: "🧴", name: "Energy Complete" },
+          { emoji: "🥤", name: "Protein Complete" },
+          { emoji: "💧", name: "Hydration Complete" },
+        ].map(({ emoji, name }) => (
+          <div key={name} style={{ background: "#1a1a1a", borderRadius: 5, padding: "7px 6px" }}>
+            <div
+              style={{
+                height: 32,
+                background: "linear-gradient(135deg, #0e0410 0%, #140618 100%)",
+                borderRadius: 3,
+                marginBottom: 5,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 12,
+              }}
+            >
+              {emoji}
+            </div>
+            <div style={{ fontSize: 6, textTransform: "uppercase", letterSpacing: "0.1em", color: "#555" }}>
+              Health
+            </div>
+            <div style={{ fontSize: 8, fontWeight: 600, color: "#eee", margin: "1px 0" }}>{name}</div>
+            <div style={{ fontSize: 7, color: "#FF2D9B", fontWeight: 600 }}>Code: JZ10</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
