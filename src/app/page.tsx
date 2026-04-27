@@ -302,7 +302,7 @@ function CompanySection({
 
 function HangwithjzPreview() {
   return (
-    <div style={{ background: "#0A0A0A", padding: "18px 20px 0", overflow: "hidden" }}>
+    <div aria-hidden="true" style={{ background: "#0A0A0A", padding: "18px 20px 0", overflow: "hidden" }}>
       {/* Browser chrome */}
       <div
         style={{
