@@ -143,6 +143,33 @@ const skills = [
   },
 ];
 
+type ProjectStatus = "live" | "coming-soon";
+
+const personalProjects: {
+  title: string;
+  description: string;
+  tags: string[];
+  href: string | null;
+  status: ProjectStatus;
+}[] = [
+  {
+    title: "hangwithjz.com",
+    description:
+      "A link-in-bio site for lifestyle content — supplement picks with discount codes, faves, UGC portfolio, and brand collabs.",
+    tags: ["Next.js", "Tailwind CSS", "Fitness & Wellness"],
+    href: "https://www.hangwithjz.com",
+    status: "live",
+  },
+  {
+    title: "Calorie Counter & Meal Tracker",
+    description:
+      "A personal health app for logging meals and tracking daily nutrition goals — built for real life, not perfection.",
+    tags: ["Mobile"],
+    href: null,
+    status: "coming-soon",
+  },
+];
+
 function CaseStudyCard({ cs }: { cs: (typeof companies)[0]["caseStudies"][0] }) {
   return (
     <div className="border-t border-[var(--color-jz-border)] py-10 flex flex-col md:flex-row gap-8 md:gap-12 items-start">
