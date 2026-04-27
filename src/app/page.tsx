@@ -411,6 +411,282 @@ function HangwithjzPreview() {
   );
 }
 
+function PersonalProjectsFeatured({ project }: { project: (typeof personalProjects)[0] }) {
+  return (
+    <div
+      style={{
+        background: "#1a051a",
+        border: "1px solid #2e0e2e",
+        borderRadius: 14,
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      {/* Mini site preview */}
+      <div style={{ flexShrink: 0, height: 200, overflow: "hidden" }}>
+        <HangwithjzPreview />
+      </div>
+
+      {/* Card body */}
+      <div style={{ padding: "22px 24px 24px", flex: 1, display: "flex", flexDirection: "column" }}>
+        {/* Live badge */}
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 5,
+            fontSize: 10,
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#ffae00",
+            border: "1px solid rgba(255,174,0,0.3)",
+            borderRadius: 999,
+            padding: "3px 10px",
+            marginBottom: 10,
+            width: "fit-content",
+          }}
+        >
+          <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#ffae00" }} />
+          Live
+        </div>
+
+        <h3
+          className="font-display"
+          style={{ fontSize: 24, fontWeight: 700, color: "#FFEAF6", marginBottom: 8 }}
+        >
+          {project.title}
+        </h3>
+
+        <p
+          className="font-body"
+          style={{ fontSize: 13, color: "rgba(255,234,246,0.5)", lineHeight: 1.6, marginBottom: 16, flex: 1 }}
+        >
+          {project.description}
+        </p>
+
+        {/* Tags */}
+        <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 18 }}>
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="font-body"
+              style={{
+                fontSize: 10,
+                border: "1px solid #2e0e2e",
+                color: "rgba(255,234,246,0.4)",
+                borderRadius: 999,
+                padding: "3px 10px",
+              }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {project.href && (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body"
+            style={{
+              display: "inline-block",
+              width: "fit-content",
+              fontSize: 11,
+              fontWeight: 600,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              padding: "9px 22px",
+              borderRadius: 999,
+              border: "1px solid #FFEAF6",
+              color: "#FFEAF6",
+              textDecoration: "none",
+            }}
+          >
+            Visit Site →
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function PersonalProjectsTeaser({ project }: { project: (typeof personalProjects)[0] }) {
+  return (
+    <div
+      style={{
+        background: "#1a051a",
+        border: "1px solid #2e0e2e",
+        borderRadius: 14,
+        padding: "32px 28px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
+      <div style={{ flex: 1 }}>
+        {/* Coming soon badge */}
+        <div
+          className="font-body"
+          style={{
+            display: "inline-block",
+            fontSize: 10,
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            background: "rgba(255,174,0,0.08)",
+            color: "#ffae00",
+            border: "1px solid rgba(255,174,0,0.25)",
+            borderRadius: 999,
+            padding: "3px 10px",
+            marginBottom: 16,
+          }}
+        >
+          Coming Soon
+        </div>
+
+        {/* Emoji + iPhone mockup */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 14,
+            marginBottom: 16,
+            opacity: 0.4,
+          }}
+        >
+          <div style={{ fontSize: 44, lineHeight: 1 }}>🥗</div>
+          {/* CSS iPhone */}
+          <div
+            style={{
+              width: 36,
+              height: 64,
+              border: "2px solid rgba(255,234,246,0.6)",
+              borderRadius: 8,
+              position: "relative",
+              flexShrink: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            {/* Notch */}
+            <div
+              style={{
+                width: 14,
+                height: 4,
+                background: "rgba(255,234,246,0.6)",
+                borderRadius: "0 0 4px 4px",
+                marginTop: 2,
+              }}
+            />
+            {/* Screen */}
+            <div
+              style={{
+                flex: 1,
+                width: "calc(100% - 6px)",
+                margin: "4px 3px 3px",
+                background: "rgba(255,234,246,0.08)",
+                borderRadius: 4,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 14,
+              }}
+            >
+              🥗
+            </div>
+            {/* Home indicator */}
+            <div
+              style={{
+                width: 12,
+                height: 2,
+                background: "rgba(255,234,246,0.4)",
+                borderRadius: 999,
+                marginBottom: 3,
+              }}
+            />
+          </div>
+        </div>
+
+        <h3
+          className="font-display"
+          style={{
+            fontSize: 20,
+            fontWeight: 700,
+            color: "rgba(255,234,246,0.6)",
+            marginBottom: 10,
+            lineHeight: 1.3,
+          }}
+        >
+          {project.title}
+        </h3>
+
+        <p
+          className="font-body"
+          style={{
+            fontSize: 12,
+            color: "rgba(255,234,246,0.3)",
+            lineHeight: 1.6,
+            marginBottom: 20,
+          }}
+        >
+          {project.description}
+        </p>
+
+        {/* Tags */}
+        <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 20 }}>
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="font-body"
+              style={{
+                fontSize: 10,
+                border: "1px solid #2e0e2e",
+                color: "rgba(255,234,246,0.4)",
+                borderRadius: 999,
+                padding: "3px 10px",
+              }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Progress bar */}
+      <div>
+        <div
+          style={{
+            background: "#2e0e2e",
+            borderRadius: 999,
+            height: 3,
+            overflow: "hidden",
+            marginBottom: 6,
+          }}
+        >
+          <div
+            style={{
+              background: "linear-gradient(90deg, #ffae00, #FF2D9B)",
+              width: "30%",
+              height: "100%",
+              borderRadius: 999,
+            }}
+          />
+        </div>
+        <div
+          className="font-body"
+          style={{ fontSize: 9, color: "rgba(255,255,255,0.25)", textAlign: "right" }}
+        >
+          In progress
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <>
