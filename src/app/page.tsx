@@ -490,20 +490,7 @@ function PersonalProjectsFeatured({ project }: { project: (typeof personalProjec
             href={project.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body"
-            style={{
-              display: "inline-block",
-              width: "fit-content",
-              fontSize: 11,
-              fontWeight: 600,
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              padding: "9px 22px",
-              borderRadius: 999,
-              border: "1px solid #FFEAF6",
-              color: "#FFEAF6",
-              textDecoration: "none",
-            }}
+            className="font-body inline-block w-fit text-[11px] font-semibold uppercase tracking-[0.1em] px-[22px] py-[9px] rounded-full border border-[#FFEAF6] text-[#FFEAF6] hover:bg-[#FFEAF6] hover:text-[#1a051a] transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFEAF6] no-underline"
           >
             Visit Site →
           </a>
@@ -549,6 +536,7 @@ function PersonalProjectsTeaser({ project }: { project: (typeof personalProjects
 
         {/* Emoji + iPhone mockup */}
         <div
+          aria-hidden="true"
           style={{
             display: "flex",
             alignItems: "center",
