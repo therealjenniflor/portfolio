@@ -676,12 +676,16 @@ function PersonalProjectsTeaser({ project }: { project: (typeof personalProjects
 }
 
 function PersonalProjectsSection() {
-  const [featured, teaser] = personalProjects;
+  const featured = personalProjects[0];
+  const teaser = personalProjects[1];
+
+  if (!featured || !teaser) return null;
 
   return (
     <section
+      aria-label="Beyond the 9-5"
       className="px-6 md:px-10 py-20 md:py-28"
-      style={{ backgroundColor: "#15030E" }}
+      style={{ backgroundColor: "#15030E", borderTop: "1px solid #2e0e2e" }}
     >
       <div className="max-w-[1500px] mx-auto">
         {/* Section header */}
@@ -1023,7 +1027,7 @@ export default function Home() {
         <PersonalProjectsSection />
       </main>
 
-      {/* ─── Wave divider (What I Bring → Footer) ─── */}
+      {/* ─── Wave divider (Beyond the 9-5 → Footer) ─── */}
       <div
         className="overflow-hidden leading-none"
         style={{ background: "linear-gradient(135deg, #fef6cc 0%, #fce4e8 100%)" }}
