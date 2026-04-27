@@ -1,0 +1,200 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400;500;600&display=swap');
+
+  .demo { font-family: 'Work Sans', sans-serif; margin-bottom: 2rem; }
+  .demo-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: #999; margin-bottom: 8px; }
+
+  /* Shared section styles */
+  .section-wrap {
+    background: #15030E;
+    border-radius: 12px;
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFEAF6;
+    margin: 0 0 8px 0;
+  }
+  .section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #777;
+    margin-bottom: 32px;
+  }
+
+  /* ── Option A: Card Grid ── */
+  .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .proj-card {
+    background: #1f0617;
+    border: 1px solid #3a1030;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .proj-card-img {
+    height: 140px;
+    background: linear-gradient(135deg, #2a0a1e 0%, #3d1030 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; font-weight: 700; color: #ffae00; opacity: 0.4;
+  }
+  .proj-card-body { padding: 16px; }
+  .proj-card-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #FFEAF6; margin: 0 0 6px; }
+  .proj-card-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.5; margin: 0 0 14px; }
+  .proj-tag { display: inline-block; font-size: 11px; border: 1px solid #3a1030; color: rgba(255,255,255,0.4); border-radius: 999px; padding: 3px 10px; margin: 0 4px 6px 0; }
+  .proj-btn { display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 7px 18px; border-radius: 999px; border: 1px solid #FFEAF6; color: #FFEAF6; text-decoration: none; }
+  .proj-btn-ghost { border-color: #3a1030; color: rgba(255,255,255,0.3); }
+  .coming-soon-badge { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; background: #ffae0022; color: #ffae00; border: 1px solid #ffae0055; border-radius: 999px; padding: 3px 10px; margin-bottom: 8px; }
+
+  /* ── Option B: Horizontal Rows ── */
+  .proj-row { border-top: 1px solid #2a0e1e; padding: 24px 0; display: flex; align-items: center; gap: 24px; }
+  .proj-row:last-child { border-bottom: 1px solid #2a0e1e; }
+  .proj-row-num { font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 700; color: #ffae00; width: 24px; flex-shrink: 0; }
+  .proj-row-info { flex: 1; }
+  .proj-row-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #FFEAF6; margin: 0 0 4px; }
+  .proj-row-desc { font-size: 13px; color: rgba(255,255,255,0.5); margin: 0; }
+  .proj-row-tags { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+  .proj-row-action { flex-shrink: 0; }
+
+  /* ── Option C: Featured + Small ── */
+  .feat-wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; align-items: stretch; }
+  .feat-main {
+    background: #1f0617; border: 1px solid #3a1030; border-radius: 12px; overflow: hidden;
+  }
+  .feat-main-img {
+    height: 200px;
+    background: linear-gradient(135deg, #2a0a1e 0%, #4a1540 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 72px; font-weight: 700; color: #ffae00; opacity: 0.3;
+  }
+  .feat-main-body { padding: 24px; }
+  .feat-main-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: #FFEAF6; margin: 0 0 8px; }
+  .feat-main-desc { font-size: 14px; color: rgba(255,255,255,0.55); margin: 0 0 16px; line-height: 1.6; }
+  .feat-side {
+    background: #1f0617; border: 1px solid #3a1030; border-radius: 12px;
+    padding: 28px 24px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+  }
+  .feat-side-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: rgba(255,234,246,0.6); margin: 12px 0 8px; }
+  .feat-side-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.5; margin: 0 0 16px; }
+  .feat-side-icon { font-size: 40px; opacity: 0.25; }
+</style>
+
+<h2>Personal Projects Section — Layout Options</h2>
+<p class="subtitle">All three use your existing dark section color <code>#15030E</code> and gold accent. Which feels right?</p>
+
+<!-- Option A -->
+<div class="option" data-choice="a" onclick="toggleSelect(this)" style="margin-bottom: 24px;">
+  <div class="letter">A</div>
+  <div class="content">
+    <h3>Card Grid</h3>
+    <p>Two equal-weight cards side by side — clean, symmetric. Works well when both projects feel equally prominent.</p>
+
+    <div class="demo">
+      <div class="section-wrap">
+        <div class="section-label">Side Projects</div>
+        <div class="section-title">Beyond the 9-to-5</div>
+        <div style="margin-bottom: 28px;"></div>
+        <div class="card-grid">
+          <div class="proj-card">
+            <div class="proj-card-img">*</div>
+            <div class="proj-card-body">
+              <div class="proj-card-name">hangwithjz.com</div>
+              <div class="proj-card-desc">A link-in-bio site for my lifestyle content — supplement recs, faves, UGC portfolio, and brand collabs.</div>
+              <div><span class="proj-tag">Next.js</span><span class="proj-tag">Tailwind</span><span class="proj-tag">Live</span></div>
+              <a class="proj-btn" href="#">Visit Site →</a>
+            </div>
+          </div>
+          <div class="proj-card">
+            <div class="proj-card-img" style="opacity:0.15;">🍽</div>
+            <div class="proj-card-body">
+              <div class="coming-soon-badge">Coming Soon</div>
+              <div class="proj-card-name">Calorie Counter & Meal Tracker</div>
+              <div class="proj-card-desc">A personal health app for logging meals and tracking daily nutrition goals.</div>
+              <div><span class="proj-tag">In Progress</span></div>
+              <a class="proj-btn proj-btn-ghost" href="#">Stay Tuned</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option B -->
+<div class="option" data-choice="b" onclick="toggleSelect(this)" style="margin-bottom: 24px;">
+  <div class="letter">B</div>
+  <div class="content">
+    <h3>Horizontal Rows</h3>
+    <p>Matches the rhythm of your case study list — numbered rows with name, description, and tags. Scales easily as you add more projects.</p>
+
+    <div class="demo">
+      <div class="section-wrap">
+        <div class="section-label">Side Projects</div>
+        <div class="section-title">Beyond the 9-to-5</div>
+        <div style="margin-bottom: 20px;"></div>
+        <div class="proj-row">
+          <div class="proj-row-num">01</div>
+          <div class="proj-row-info">
+            <div class="proj-row-name">hangwithjz.com</div>
+            <div class="proj-row-desc">A link-in-bio site for lifestyle content — supplement recs, faves, UGC portfolio.</div>
+            <div class="proj-row-tags">
+              <span class="proj-tag">Next.js</span><span class="proj-tag">Tailwind</span><span class="proj-tag" style="color:#ffae00;border-color:#ffae0055;">Live ↗</span>
+            </div>
+          </div>
+          <div class="proj-row-action"><a class="proj-btn" href="#">Visit →</a></div>
+        </div>
+        <div class="proj-row">
+          <div class="proj-row-num">02</div>
+          <div class="proj-row-info">
+            <div class="proj-row-name" style="opacity:0.5;">Calorie Counter & Meal Tracker</div>
+            <div class="proj-row-desc">A personal health app for logging meals and tracking daily nutrition goals.</div>
+            <div class="proj-row-tags">
+              <span class="coming-soon-badge" style="margin:0;">Coming Soon</span>
+            </div>
+          </div>
+          <div class="proj-row-action"><span class="proj-btn proj-btn-ghost">In Progress</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Option C -->
+<div class="option" data-choice="c" onclick="toggleSelect(this)" style="margin-bottom: 24px;">
+  <div class="letter">C</div>
+  <div class="content">
+    <h3>Featured + Teaser</h3>
+    <p>hangwithjz gets the spotlight with a big card; the coming-soon project sits as a smaller teaser beside it. Emphasizes the live project.</p>
+
+    <div class="demo">
+      <div class="section-wrap">
+        <div class="section-label">Side Projects</div>
+        <div class="section-title">Beyond the 9-to-5</div>
+        <div style="margin-bottom: 28px;"></div>
+        <div class="feat-wrap">
+          <div class="feat-main">
+            <div class="feat-main-img">*</div>
+            <div class="feat-main-body">
+              <div><span class="proj-tag" style="color:#ffae00;border-color:#ffae0055;margin:0 0 10px;">Live ↗</span></div>
+              <div class="feat-main-name">hangwithjz.com</div>
+              <div class="feat-main-desc">A link-in-bio site for lifestyle content — supplement recs, faves, UGC portfolio, and brand collabs.</div>
+              <div style="margin-bottom:12px;"><span class="proj-tag">Next.js</span><span class="proj-tag">Tailwind CSS</span></div>
+              <a class="proj-btn" href="#">Visit Site →</a>
+            </div>
+          </div>
+          <div class="feat-side">
+            <div class="feat-side-icon">🍽</div>
+            <div class="coming-soon-badge">Coming Soon</div>
+            <div class="feat-side-name">Calorie Counter & Meal Tracker</div>
+            <div class="feat-side-desc">A personal health app for logging meals and tracking daily nutrition goals.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
