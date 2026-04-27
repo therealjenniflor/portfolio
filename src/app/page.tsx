@@ -675,6 +675,36 @@ function PersonalProjectsTeaser({ project }: { project: (typeof personalProjects
   );
 }
 
+function PersonalProjectsSection() {
+  const [featured, teaser] = personalProjects;
+
+  return (
+    <section
+      className="px-6 md:px-10 py-20 md:py-28"
+      style={{ backgroundColor: "#15030E" }}
+    >
+      <div className="max-w-[1500px] mx-auto">
+        {/* Section header */}
+        <p className="font-body text-sm uppercase tracking-widest mb-3" style={{ color: "#666" }}>
+          Side Projects
+        </p>
+        <h2
+          className="font-display font-bold mb-10"
+          style={{ fontSize: "clamp(2rem, 5vw, 3rem)", color: "#FFEAF6" }}
+        >
+          Beyond the 9-5
+        </h2>
+
+        {/* Featured + Teaser grid */}
+        <div className="grid grid-cols-1 md:grid-cols-[1.75fr_1fr] gap-5 items-stretch">
+          <PersonalProjectsFeatured project={featured} />
+          <PersonalProjectsTeaser project={teaser} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -988,6 +1018,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ─── Beyond the 9-5 ─── */}
+        <PersonalProjectsSection />
       </main>
 
       {/* ─── Wave divider (What I Bring → Footer) ─── */}
