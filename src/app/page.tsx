@@ -157,7 +157,7 @@ const personalProjects: {
     description:
       "A link-in-bio site for lifestyle content — supplement picks with discount codes, faves, UGC portfolio, and brand collabs.",
     tags: ["Next.js", "Tailwind CSS", "Fitness & Wellness"],
-    href: "https://www.hangwithjz.com",
+    href: "/hangwithjz",
     status: "live",
   },
   {
@@ -423,9 +423,15 @@ function PersonalProjectsFeatured({ project }: { project: (typeof personalProjec
         flexDirection: "column",
       }}
     >
-      {/* Mini site preview */}
-      <div style={{ flexShrink: 0, height: 200, overflow: "hidden" }}>
-        <HangwithjzPreview />
+      {/* Device mockup image */}
+      <div style={{ flexShrink: 0, height: 240, overflow: "hidden", background: "#0d0d0d" }}>
+        <Image
+          src="/images/hangwithjz/hangwithjz-hero.png"
+          alt="hangwithjz.com"
+          width={1400}
+          height={700}
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Card body */}
@@ -486,14 +492,12 @@ function PersonalProjectsFeatured({ project }: { project: (typeof personalProjec
         </div>
 
         {project.href && (
-          <a
+          <Link
             href={project.href}
-            target="_blank"
-            rel="noopener noreferrer"
             className="font-body inline-block w-fit text-[11px] font-semibold uppercase tracking-[0.1em] px-[22px] py-[9px] rounded-full border border-[#FFEAF6] text-[#FFEAF6] hover:bg-[#FFEAF6] hover:text-[#1a051a] transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFEAF6] no-underline"
           >
-            Visit Site →
-          </a>
+            View Work →
+          </Link>
         )}
       </div>
     </div>
@@ -689,7 +693,7 @@ function PersonalProjectsSection() {
     >
       <div className="max-w-[1500px] mx-auto">
         {/* Section header */}
-        <p className="font-body text-sm uppercase tracking-widest mb-3" style={{ color: "#666" }}>
+        <p className="font-body text-sm uppercase tracking-widest mb-3" style={{ color: "#fff" }}>
           Side Projects
         </p>
         <h2
@@ -955,7 +959,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ─── Wave divider (Work → What I Bring) ─── */}
+        {/* ─── Wave divider (Work → Side Projects) ─── */}
         <div
           className="overflow-hidden leading-none"
           style={{ backgroundColor: "#15030E" }}
@@ -979,6 +983,9 @@ export default function Home() {
             />
           </svg>
         </div>
+
+        {/* ─── Beyond the 9-5 ─── */}
+        <PersonalProjectsSection />
 
         {/* ─── What I Bring ─── */}
         <section
@@ -1022,9 +1029,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* ─── Beyond the 9-5 ─── */}
-        <PersonalProjectsSection />
       </main>
 
       {/* ─── Wave divider (Beyond the 9-5 → Footer) ─── */}

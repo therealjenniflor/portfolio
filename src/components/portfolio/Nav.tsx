@@ -151,6 +151,44 @@ export default function Nav() {
                     Project Untaboo
                   </Link>
                 </div>
+
+                {/* Side Projects  -  collapsible group */}
+                <div className="border-t border-pink-100">
+                  <div className="flex items-center justify-between px-4 py-3">
+                    <span className="font-body text-xs font-semibold uppercase tracking-widest text-[var(--color-jz-text)]">
+                      Side Projects
+                    </span>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setOpenGroup(openGroup === "side-projects" ? null : "side-projects"); }}
+                      className="text-[var(--color-jz-text-muted)] hover:text-[var(--color-jz-text)] transition-colors p-0.5"
+                      aria-label="Toggle Side Projects"
+                    >
+                      <svg width="11" height="11" viewBox="0 0 12 12" fill="none"
+                        className={`transition-transform duration-200 ${openGroup === "side-projects" ? "rotate-180" : ""}`}
+                      >
+                        <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  {openGroup === "side-projects" && (
+                    <div className="pb-1">
+                      <Link
+                        href="/hangwithjz"
+                        onClick={() => setProjectsOpen(false)}
+                        className={`block pl-6 pr-4 py-2 font-body text-sm transition-colors duration-150 ${
+                          pathname === "/hangwithjz"
+                            ? "text-[var(--color-jz-text)] bg-[var(--color-jz-surface)]"
+                            : "text-[var(--color-jz-text-secondary)] hover:text-[var(--color-jz-text)] hover:bg-[var(--color-jz-surface)]"
+                        }`}
+                      >
+                        hangwithjz.com
+                      </Link>
+                      <span className="block pl-6 pr-4 py-2 font-body text-sm text-[var(--color-jz-text-muted)] opacity-50 cursor-default">
+                        Coming Soon
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>
@@ -253,6 +291,37 @@ export default function Nav() {
                 >
                   Project Untaboo
                 </Link>
+
+                {/* Side Projects  -  collapsible group */}
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="font-body text-xs font-semibold uppercase tracking-widest text-[var(--color-jz-text-secondary)] py-1.5">
+                      Side Projects
+                    </span>
+                    <button
+                      onClick={() => setMobileGroupOpen(mobileGroupOpen === "side-projects" ? null : "side-projects")}
+                      className="p-1 text-[var(--color-jz-text-muted)]"
+                    >
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" className={`transition-transform duration-200 ${mobileGroupOpen === "side-projects" ? "rotate-180" : ""}`}>
+                        <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  {mobileGroupOpen === "side-projects" && (
+                    <div className="pl-3 flex flex-col gap-0.5">
+                      <Link
+                        href="/hangwithjz"
+                        className="block font-body text-sm text-[var(--color-jz-text-muted)] hover:text-[var(--color-jz-accent)] py-1.5 pl-4 transition-colors"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        hangwithjz.com
+                      </Link>
+                      <span className="block font-body text-sm text-[var(--color-jz-text-muted)] opacity-50 py-1.5 pl-4 cursor-default">
+                        Coming Soon
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>
