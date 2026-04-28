@@ -90,6 +90,7 @@ const learningCols = [
       "Brand clarity before design is everything. Having a clear visual identity made every decision faster and more consistent.",
       "Building from scratch reveals what templates actually abstract away, and which of those abstractions are actually worth keeping.",
       "AI-assisted development is a skill, not a shortcut. Knowing what to ask for and how to review output is its own craft.",
+      "This project taught me GitHub as a real workflow tool, not just version control in theory. Branching, committing with intention, and pushing to production through Vercel made the dev-to-deploy loop feel tangible and repeatable.",
     ],
   },
   {
