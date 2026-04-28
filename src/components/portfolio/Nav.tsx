@@ -181,10 +181,11 @@ export default function Nav() {
                             : "text-[var(--color-jz-text-secondary)] hover:text-[var(--color-jz-text)] hover:bg-[var(--color-jz-surface)]"
                         }`}
                       >
-                        hangwithjz.com
+                        Custom link-in-bio site
                       </Link>
-                      <span className="block pl-6 pr-4 py-2 font-body text-sm text-[var(--color-jz-text-muted)] opacity-50 cursor-default">
-                        Coming Soon
+                      <span className="flex items-baseline gap-2 pl-6 pr-4 py-2 font-body text-sm text-[var(--color-jz-text-muted)] opacity-50 cursor-default">
+                        Calorie counter + meal tracker
+                        <span className="text-xs italic">coming soon</span>
                       </span>
                     </div>
                   )}
@@ -314,10 +315,11 @@ export default function Nav() {
                         className="block font-body text-sm text-[var(--color-jz-text-muted)] hover:text-[var(--color-jz-accent)] py-1.5 pl-4 transition-colors"
                         onClick={() => setMenuOpen(false)}
                       >
-                        hangwithjz.com
+                        Custom link-in-bio site
                       </Link>
-                      <span className="block font-body text-sm text-[var(--color-jz-text-muted)] opacity-50 py-1.5 pl-4 cursor-default">
-                        Coming Soon
+                      <span className="flex items-baseline gap-2 font-body text-sm text-[var(--color-jz-text-muted)] opacity-50 py-1.5 pl-4 cursor-default">
+                        Calorie counter + meal tracker
+                        <span className="text-xs italic">coming soon</span>
                       </span>
                     </div>
                   )}

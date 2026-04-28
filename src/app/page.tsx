@@ -987,31 +987,53 @@ export default function Home() {
         {/* ─── Beyond the 9-5 ─── */}
         <PersonalProjectsSection />
 
+        {/* ─── S-shape divider (Side Projects → What I Bring) ─── */}
+        <div className="overflow-hidden leading-none" style={{ backgroundColor: "#fde8f0" }}>
+          <svg
+            viewBox="0 0 1440 100"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            className="w-full block"
+            style={{ height: "100px" }}
+          >
+            <path
+              d="M0,0 L0,50 C240,90 480,10 720,50 C960,90 1200,10 1440,50 L1440,0 Z"
+              fill="#15030E"
+            />
+            <path
+              d="M0,50 C240,90 480,10 720,50 C960,90 1200,10 1440,50"
+              fill="none"
+              stroke="#FF1493"
+              strokeWidth="2.5"
+            />
+          </svg>
+        </div>
+
         {/* ─── What I Bring ─── */}
         <section
           className="px-6 md:px-10 py-20 md:py-28"
-          style={{ backgroundColor: "#15030E" }}
+          style={{ backgroundColor: "#fde8f0" }}
         >
           <div className="max-w-[1500px] mx-auto">
             <h2
               className="font-display text-4xl md:text-6xl font-bold mb-12"
-              style={{ color: "#FFEAF6" }}
+              style={{ color: "#C2185B" }}
             >
               What I bring to the table
             </h2>
-            <div className="divide-y border-t" style={{ borderColor: "#fef6cc" }}>
+            <div className="divide-y border-t" style={{ borderColor: "#f0aac8" }}>
               {skills.map((skill) => (
-                <details key={skill.title} className="group py-0" style={{ borderColor: "#fef6cc" }}>
+                <details key={skill.title} className="group py-0" style={{ borderColor: "#f0aac8" }}>
                   <summary className="flex items-center justify-between py-6 cursor-pointer">
                     <span
                       className="font-body text-lg md:text-xl font-semibold pr-4"
-                      style={{ color: "#fff" }}
+                      style={{ color: "#1a1a1a" }}
                     >
                       {skill.title}
                     </span>
                     <span
                       className="flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center group-open:rotate-45 transition-transform duration-200 text-xl font-light"
-                      style={{ borderColor: "#fef6cc", color: "#fef6cc" }}
+                      style={{ borderColor: "#C2185B", color: "#C2185B" }}
                     >
                       +
                     </span>
@@ -1019,7 +1041,7 @@ export default function Home() {
                   <div className="pb-8 pr-12">
                     <p
                       className="font-body text-base leading-relaxed"
-                      style={{ color: "rgba(255,255,255,0.7)" }}
+                      style={{ color: "rgba(0,0,0,0.65)" }}
                     >
                       {skill.body}
                     </p>
@@ -1031,7 +1053,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* ─── Wave divider (Beyond the 9-5 → Footer) ─── */}
+      {/* ─── Wave divider (What I Bring → Footer) ─── */}
       <div
         className="overflow-hidden leading-none"
         style={{ background: "linear-gradient(135deg, #fef6cc 0%, #fce4e8 100%)" }}
@@ -1045,7 +1067,7 @@ export default function Home() {
         >
           <path
             d="M0,0 L0,60 C240,0 480,80 720,40 C960,0 1200,80 1440,20 L1440,0 Z"
-            fill="#15030E"
+            fill="#fde8f0"
           />
           <path
             d="M0,60 C240,0 480,80 720,40 C960,0 1200,80 1440,20"
