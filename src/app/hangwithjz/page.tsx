@@ -277,7 +277,7 @@ export default function HangwithjzPage() {
                 Design and build a custom site from scratch, no templates, no constraints. Define a clear
                 brand identity first, then build a layout that lets my content breathe:{" "}
                 <strong className="text-[var(--color-jz-text)]">scannable, visual, and unmistakably mine</strong>.
-                Ship it with Claude Code and Vercel to prove the full AI-to-production workflow.
+                Built in Claude Code, hosted in Vercel, and shipped with Github to prove the full AI-to-production workflow.
               </p>
             </div>
           </div>
