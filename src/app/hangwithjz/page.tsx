@@ -139,7 +139,7 @@ export default function HangwithjzPage() {
                 <span className="text-2xl md:text-3xl font-semibold text-[var(--color-jz-text-secondary)] block mt-2">hangwithjz.com · 2026</span>
               </h1>
               <p className="font-body text-xl md:text-2xl text-[var(--color-jz-text-secondary)] leading-relaxed">
-                A fully custom link-in-bio site because cookie-cutter templates weren&apos;t going to cut it.
+                Yup, I&apos;m also a content creator in the fitness and wellness space :D I wanted a fully custom link-in-bio site and cookie-cutter templates weren&apos;t going to cut it.
               </p>
             </div>
             <div>
