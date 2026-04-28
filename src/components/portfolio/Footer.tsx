@@ -37,7 +37,7 @@ export default function Footer() {
               aria-label={label}
               className="text-[var(--color-jz-text)] hover:text-[var(--color-jz-accent)] transition-colors duration-200"
             >
-              <FontAwesomeIcon icon={icon} className="w-8 h-8" />
+              <FontAwesomeIcon icon={icon} style={{ fontSize: "1.5rem" }} />
             </a>
           ))}
         </div>
