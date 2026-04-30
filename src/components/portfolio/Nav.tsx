@@ -205,7 +205,7 @@ export default function Nav() {
             About
           </Link>
           <a
-            href="/JZ.Resume.2026.pdf"
+            href="/jz-resume-2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-sm font-medium text-[var(--color-jz-text-secondary)] hover:text-[var(--color-jz-text)] transition-colors duration-200"
@@ -336,7 +336,7 @@ export default function Nav() {
             About
           </Link>
           <a
-            href="/JZ.Resume.2026.pdf"
+            href="/jz-resume-2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-base font-medium text-[var(--color-jz-text)] hover:text-[var(--color-jz-accent)] transition-colors py-2"

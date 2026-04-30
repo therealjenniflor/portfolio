@@ -4,6 +4,9 @@ import { playfairDisplay, workSans } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/images/jz-favicon.svg",
+  },
   title: "Jennifer Zaragoza — a cool Product Designer",
   description:
     "Product Designer with 6 years of experience in Experience Design, Design Thinking, and Product Strategy in the B2B SaaS space.",

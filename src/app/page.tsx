@@ -806,7 +806,7 @@ export default function Home() {
                   className="font-semibold jz-highlight"
                   style={{ textDecorationColor: "#000" }}
                 >
-                  Design System
+                  Design Systems
                 </span>{" "}
                 and{" "}
                 <span

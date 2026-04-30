@@ -193,8 +193,9 @@ export default function HangwithjzPage() {
                 and the personal online brand I was building.
               </p>
               <p className="font-body text-lg text-[var(--color-jz-text-secondary)] leading-relaxed mb-6">
-                So I built it myself, from scratch, in Next.js, deployed on Vercel. This project was as
-                much about{" "}
+                So I built it myself, from scratch, in Next.js — built using{" "}
+                <strong className="text-[var(--color-jz-text)]">Claude Code</strong>{" "}
+                and deployed on Vercel. This project was as much about{" "}
                 <strong className="text-[var(--color-jz-text)]">testing AI-assisted development workflows</strong>{" "}
                 as it was about shipping a product I&apos;d actually use. It houses my affiliate picks, my
                 faves, my UGC portfolio, and my brand collab info in one place.
