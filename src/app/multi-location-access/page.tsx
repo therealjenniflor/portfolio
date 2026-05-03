@@ -49,7 +49,7 @@ const solutions = [
       "Location dropdown surfaces all JZ Tacos locations: DOCO, Lindon, SOHO, for precise filtering",
       "The top nav always reflects the active account, so operators know exactly where they are",
     ],
-    image: "/images/multi_location/multi-location-dashboard/All Locations.png",
+    image: "/images/multi_location/multi-location-dashboard/all-locations-2.png",
     imageAlt: "Admin portal with JZ Tacos selected, showing its specific locations in the dropdown",
     textLeft: false,
   },
