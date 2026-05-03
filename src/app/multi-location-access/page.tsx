@@ -37,7 +37,7 @@ const solutions = [
       "Dropdown exposes all associated accounts: Downtown Diner, JZ Tacos, Pizza Palace, without leaving the current page",
       "Selecting a specific account scopes the admin experience to that restaurant instantly",
     ],
-    image: "/images/multi_location/multi-location-dashboard/Account + Locations _ Dropdown.png",
+    image: "/images/multi_location/multi-location-dashboard/account-locations -dropdown.png",
     imageAlt: "Account dropdown open showing Downtown Diner, JZ Tacos, and Pizza Palace alongside the Locations selector",
     textLeft: true,
   },
