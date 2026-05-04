@@ -377,6 +377,97 @@ export default function PosRedesignPage() {
           </div>
         </section>
 
+        {/* ─── Metrics ─── */}
+        <section className={`${c.bg} px-6 md:px-10 py-16 md:py-24`}>
+          <div className="max-w-[1500px] mx-auto">
+            <p className={`font-body text-sm uppercase tracking-widest ${c.label} mb-3`}>
+              Measuring Success
+            </p>
+            <h2 className={`font-display text-4xl md:text-5xl font-bold ${c.text} mb-4 leading-tight`}>
+              How I Defined, Tested &amp; Tracked It
+            </h2>
+            <p className={`font-body text-lg ${c.textSec} max-w-3xl leading-relaxed mb-16`}>
+              Before design even started, I proposed a set of success metrics to the PM and we aligned on what &ldquo;better&rdquo; actually meant, so we weren&apos;t shipping on gut feeling. Metrics were defined upfront, tested during prototype reviews, and validated post-launch through internal analytics.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-r border-b" style={{ borderColor: "var(--tw-border-opacity, 1)", borderRadius: "2px" }}>
+
+              {/* Column 1 - Defined */}
+              <div className={`border-b md:border-b-0 md:border-r ${c.border} p-8 md:p-10`}>
+                <div className={`font-body text-xs uppercase tracking-widest ${c.label} mb-6`}>01 - Defined</div>
+                <h3 className={`font-display text-2xl font-bold ${c.text} mb-4`}>What I Chose to Track</h3>
+                <p className={`font-body text-base ${c.textSec} leading-relaxed mb-6`}>
+                  I identified three core signals that would tell us if the redesign was working. I chose them because they mapped directly to the business problem (tip drop-off), not just design quality. I presented these to the PM and we agreed this was the right approach.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    { label: "Tip Completion Rate", desc: "% of customers who reached the tip screen and selected an amount" },
+                    { label: "Checkout Flow Completion Rate", desc: "% of transactions that reached the final confirmation screen without abandonment" },
+                    { label: "Review Submission Rate", desc: "% of customers who engaged with the post-payment review prompt" },
+                  ].map(({ label, desc }) => (
+                    <li key={label} className="flex gap-3">
+                      <span className={`mt-1 shrink-0 ${c.textMuted}`}>·</span>
+                      <span className={`font-body text-sm ${c.textSec} leading-relaxed`}>
+                        <strong className={c.text}>{label}:</strong> {desc}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 2 - Tested */}
+              <div className={`border-b md:border-b-0 md:border-r ${c.border} p-8 md:p-10`}>
+                <div className={`font-body text-xs uppercase tracking-widest ${c.label} mb-6`}>02 - Tested</div>
+                <h3 className={`font-display text-2xl font-bold ${c.text} mb-4`}>How I Validated Before Launch</h3>
+                <p className={`font-body text-base ${c.textSec} leading-relaxed mb-6`}>
+                  With no access to live users, I drove validation through internal walkthroughs and prototype reviews. I structured these sessions to surface friction before it hit production and presented findings back to the PM for sign-off.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    { label: "Prototype Walkthroughs", desc: "I facilitated sessions where stakeholders and the PM stepped through the flow to flag confusion points and timing issues" },
+                    { label: "Screen Timing Reviews", desc: "I reviewed how long each screen was visible and whether key actions (tip, review) were surfaced at the right moment" },
+                    { label: "Heuristic Evaluation", desc: "I assessed each screen against usability principles: clarity, visibility of system status, and error prevention" },
+                  ].map(({ label, desc }) => (
+                    <li key={label} className="flex gap-3">
+                      <span className={`mt-1 shrink-0 ${c.textMuted}`}>·</span>
+                      <span className={`font-body text-sm ${c.textSec} leading-relaxed`}>
+                        <strong className={c.text}>{label}:</strong> {desc}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 3 - Success */}
+              <div className={`p-8 md:p-10`}>
+                <div className={`font-body text-xs uppercase tracking-widest ${c.label} mb-6`}>03 - Success</div>
+                <h3 className={`font-display text-2xl font-bold ${c.text} mb-4`}>How It Determined the Outcome</h3>
+                <p className={`font-body text-base ${c.textSec} leading-relaxed mb-6`}>
+                  Post-launch data was reviewed internally. I tracked the signals I had defined and shared a summary with the PM. Success wasn&apos;t a single number; it was a pattern across all three signals moving in the same direction.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    { label: "Tip Completion up", desc: "Surfacing the tip screen earlier and with clearer hierarchy led to more customers completing the step" },
+                    { label: "Fewer Drop-offs", desc: "Improved progress cues reduced premature exits so customers understood more steps were coming" },
+                    { label: "Review Engagement up", desc: "Placing the review prompt post-confirmation rather than mid-flow improved submission rates" },
+                  ].map(({ label, desc }) => (
+                    <li key={label} className="flex gap-3">
+                      <span className={`mt-1 shrink-0 ${c.textMuted}`}>·</span>
+                      <span className={`font-body text-sm ${c.textSec} leading-relaxed`}>
+                        <strong className={c.text}>{label}:</strong> {desc}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p className={`font-body text-xs ${c.textMuted} italic mt-8`}>
+                  Specific figures are omitted under NDA.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         {/* ─── Reflection ─── */}
         <section className="bg-[#1a130a] overflow-hidden py-16 md:py-24">
 
