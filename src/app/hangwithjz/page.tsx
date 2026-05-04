@@ -3,6 +3,7 @@ import Image from "next/image";
 import Nav from "@/components/portfolio/Nav";
 import Footer from "@/components/portfolio/Footer";
 import Link from "next/link";
+import CaseStudyNav from "@/components/portfolio/CaseStudyNav";
 
 export const metadata: Metadata = {
   title: "Building My Corner of the Internet | JZ",
@@ -121,14 +122,25 @@ function WaveDivider(_props: { bgTop: string; bgBottom: string }) {
   );
 }
 
+const sections = [
+  { id: "hero", label: "Overview" },
+  { id: "context", label: "Context" },
+  { id: "problem", label: "Problem" },
+  { id: "business-goals", label: "Goals" },
+  { id: "solution", label: "Solution" },
+  { id: "data-layer", label: "Data Layer" },
+  { id: "learnings", label: "Learnings" },
+];
+
 export default function HangwithjzPage() {
   return (
     <>
       <Nav />
+      <CaseStudyNav sections={sections} />
       <main>
 
         {/* ─── Hero ─── */}
-        <section className="bg-[#fff5f9] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
+        <section id="hero" className="bg-[#fff5f9] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-center">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
@@ -159,7 +171,7 @@ export default function HangwithjzPage() {
         </section>
 
         {/* ─── Context ─── */}
-        <section className="bg-[#fdeef4] px-6 md:px-10 py-16 md:py-24">
+        <section id="context" className="bg-[#fdeef4] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -209,7 +221,7 @@ export default function HangwithjzPage() {
         </section>
 
         {/* ─── Problem ─── */}
-        <section className="bg-[#fff5f9] px-6 md:px-10 py-16 md:py-24">
+        <section id="problem" className="bg-[#fff5f9] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto border-t border-[var(--color-jz-border)] pt-12">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Problem
@@ -259,7 +271,7 @@ export default function HangwithjzPage() {
         <WaveDivider bgTop="#fff5f9" bgBottom="#fdeef4" />
 
         {/* ─── Business Goals ─── */}
-        <section className="bg-[#fdeef4] px-6 md:px-10 py-16 md:py-24">
+        <section id="business-goals" className="bg-[#fdeef4] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-px bg-[#f5c8dc]">
             <div className="bg-[#fdeef4] p-10 md:p-14">
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-6">
@@ -286,7 +298,7 @@ export default function HangwithjzPage() {
         </section>
 
         {/* ─── Pain Points + Solution ─── */}
-        <section className="bg-[#fff5f9] px-6 md:px-10 py-16 md:py-24">
+        <section id="solution" className="bg-[#fff5f9] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
 
             {/* Pain point cards */}
@@ -385,7 +397,7 @@ export default function HangwithjzPage() {
         <WaveDivider bgTop="#fff5f9" bgBottom="#fff5f9" />
 
         {/* ─── JSON Data Layer ─── */}
-        <section className="bg-[#fff5f9] px-6 md:px-10 py-20 md:py-28">
+        <section id="data-layer" className="bg-[#fff5f9] px-6 md:px-10 py-20 md:py-28">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Under the Hood
@@ -473,7 +485,7 @@ export default function HangwithjzPage() {
         <WaveDivider bgTop="#fdeef4" bgBottom="#f9d5e8" />
 
         {/* ─── Learnings ─── */}
-        <section className="bg-[#f9d5e8] overflow-hidden py-16 md:py-24">
+        <section id="learnings" className="bg-[#f9d5e8] overflow-hidden py-16 md:py-24">
           <div className="overflow-hidden mb-14 cursor-default select-none">
             <div className="marquee-track flex whitespace-nowrap">
               {[0, 1].map((n) => (

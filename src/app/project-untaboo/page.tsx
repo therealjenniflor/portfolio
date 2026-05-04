@@ -3,6 +3,7 @@ import Image from "next/image";
 import Nav from "@/components/portfolio/Nav";
 import Footer from "@/components/portfolio/Footer";
 import Link from "next/link";
+import CaseStudyNav from "@/components/portfolio/CaseStudyNav";
 
 export const metadata: Metadata = {
   title: "Project Untaboo — JZ",
@@ -37,14 +38,29 @@ const reflectionCols = [
   },
 ];
 
+const sections = [
+  { id: "hero", label: "Overview" },
+  { id: "context", label: "Context" },
+  { id: "problem", label: "Problem" },
+  { id: "goals", label: "Goals" },
+  { id: "research", label: "Research" },
+  { id: "pain-points", label: "Pain Points" },
+  { id: "workshop", label: "Workshop" },
+  { id: "iteration", label: "First Iteration" },
+  { id: "solution", label: "Solution" },
+  { id: "key-screens", label: "Key Screens" },
+  { id: "reflection", label: "Reflection" },
+];
+
 export default function ProjectUntabooPage() {
   return (
     <>
       <Nav />
+      <CaseStudyNav sections={sections} />
       <main>
 
         {/* ─── Hero ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
+        <section id="hero" className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
@@ -76,7 +92,7 @@ export default function ProjectUntabooPage() {
         </section>
 
         {/* ─── Context ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="context" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16 items-start">
             {/* Metadata */}
             <div className="space-y-8">
@@ -125,7 +141,7 @@ export default function ProjectUntabooPage() {
         </section>
 
         {/* ─── Problem Statement ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24 border-t border-[var(--color-jz-border)]">
+        <section id="problem" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24 border-t border-[var(--color-jz-border)]">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Problem
@@ -143,7 +159,7 @@ export default function ProjectUntabooPage() {
         </section>
 
         {/* ─── Business Goals + My Plan ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="goals" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -189,7 +205,7 @@ export default function ProjectUntabooPage() {
         </section>
 
         {/* ─── Research Process ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="research" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Research
@@ -231,7 +247,7 @@ export default function ProjectUntabooPage() {
         </section>
 
         {/* ─── Pain Points ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="pain-points" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Research Insights
@@ -332,7 +348,7 @@ export default function ProjectUntabooPage() {
         </section>
 
         {/* ─── Workshop / Ideation ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="workshop" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Ideation
@@ -387,7 +403,7 @@ export default function ProjectUntabooPage() {
         </section>
 
         {/* ─── First Iteration ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="iteration" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -428,7 +444,7 @@ export default function ProjectUntabooPage() {
         </section>
 
         {/* ─── The Solution ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="solution" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Solution
@@ -565,7 +581,7 @@ export default function ProjectUntabooPage() {
         </section>
 
         {/* ─── Key Screens ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="key-screens" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Key Screens
@@ -652,7 +668,7 @@ export default function ProjectUntabooPage() {
         </section>
 
         {/* ─── Reflection ─── */}
-        <section className="bg-[#1a130a] overflow-hidden py-16 md:py-24">
+        <section id="reflection" className="bg-[#1a130a] overflow-hidden py-16 md:py-24">
           <div className="overflow-hidden mb-14 cursor-default select-none">
             <div className="marquee-track flex whitespace-nowrap">
               {[0, 1].map((n) => (

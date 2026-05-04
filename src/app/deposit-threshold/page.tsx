@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Nav from "@/components/portfolio/Nav";
 import Footer from "@/components/portfolio/Footer";
+import CaseStudyNav from "@/components/portfolio/CaseStudyNav";
 
 export const metadata: Metadata = {
   title: "Deposit Threshold — JZ",
@@ -122,14 +123,28 @@ function ImgPlaceholder({ label }: { label: string }) {
   );
 }
 
+const sections = [
+  { id: "hero", label: "Overview" },
+  { id: "callout", label: "Callout" },
+  { id: "problem", label: "Problem" },
+  { id: "goals", label: "Goals" },
+  { id: "role", label: "My Role" },
+  { id: "process", label: "Process" },
+  { id: "before", label: "Before" },
+  { id: "solution-bridge", label: "Solution" },
+  { id: "final-designs", label: "Final Designs" },
+  { id: "reflection", label: "Reflection" },
+];
+
 export default function DepositThresholdPage() {
   return (
     <>
       <Nav />
+      <CaseStudyNav sections={sections} />
       <main>
 
         {/* ─── Hero ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
+        <section id="hero" className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
               <strong>Global Payments</strong> • Admin Tooling • Systems Thinking • Scalable Workflows
@@ -150,7 +165,7 @@ export default function DepositThresholdPage() {
         </section>
 
         {/* ─── Callout ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="callout" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -180,7 +195,7 @@ export default function DepositThresholdPage() {
         </section>
 
         {/* ─── The Problemo ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="problem" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start border-t border-[var(--color-jz-border)] pt-12">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -206,7 +221,7 @@ export default function DepositThresholdPage() {
         </section>
 
         {/* ─── Business Goals + My Plan ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="goals" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Business Goals */}
             <div>
@@ -260,7 +275,7 @@ export default function DepositThresholdPage() {
         </section>
 
         {/* ─── My Role ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="role" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               My Role
@@ -293,7 +308,7 @@ export default function DepositThresholdPage() {
         </section>
 
         {/* ─── My Process ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="process" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Process
@@ -323,7 +338,7 @@ export default function DepositThresholdPage() {
         </section>
 
         {/* ─── Before Pictures ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="before" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Before
@@ -400,7 +415,7 @@ export default function DepositThresholdPage() {
         </section>
 
         {/* ─── Solution Bridge ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="solution-bridge" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto space-y-24">
 
             {/* Row 1  -  image left, text right */}
@@ -451,7 +466,7 @@ export default function DepositThresholdPage() {
         </section>
 
         {/* ─── Final / After Designs ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="final-designs" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Solution
@@ -501,7 +516,7 @@ export default function DepositThresholdPage() {
         </section>
 
         {/* ─── Reflection ─── */}
-        <section className="bg-[#1a130a] overflow-hidden py-16 md:py-24">
+        <section id="reflection" className="bg-[#1a130a] overflow-hidden py-16 md:py-24">
           <div className="overflow-hidden mb-14 cursor-default select-none" title="Hover to pause">
             <div className="marquee-track flex whitespace-nowrap">
               {[0, 1].map((n) => (

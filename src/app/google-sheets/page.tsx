@@ -3,6 +3,7 @@ import Image from "next/image";
 import Nav from "@/components/portfolio/Nav";
 import Footer from "@/components/portfolio/Footer";
 import Link from "next/link";
+import CaseStudyNav from "@/components/portfolio/CaseStudyNav";
 
 export const metadata: Metadata = {
   title: "Google Sheet Integration — JZ",
@@ -85,14 +86,27 @@ const reflectionCols = [
   },
 ];
 
+const sections = [
+  { id: "hero", label: "Overview" },
+  { id: "context", label: "Context" },
+  { id: "problem", label: "Problem" },
+  { id: "business-goals", label: "Goals" },
+  { id: "discovery", label: "Discovery" },
+  { id: "pain-points", label: "Pain Points" },
+  { id: "solution", label: "Solution" },
+  { id: "key-insights", label: "Key Insights" },
+  { id: "reflection", label: "Reflection" },
+];
+
 export default function GoogleSheetsPage() {
   return (
     <>
       <Nav />
+      <CaseStudyNav sections={sections} />
       <main>
 
         {/* ─── Hero ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
+        <section id="hero" className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
@@ -125,7 +139,7 @@ export default function GoogleSheetsPage() {
         </section>
 
         {/* ─── Context ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="context" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -173,7 +187,7 @@ export default function GoogleSheetsPage() {
         </section>
 
         {/* ─── Problem ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="problem" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto border-t border-[var(--color-jz-border)] pt-12">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Problem
@@ -201,7 +215,7 @@ export default function GoogleSheetsPage() {
         </section>
 
         {/* ─── Business Goals ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="business-goals" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Goals
@@ -231,7 +245,7 @@ export default function GoogleSheetsPage() {
         </section>
 
         {/* ─── Discovery ─── */}
-        <section className="px-6 md:px-10 py-16 md:py-24" style={{ background: "linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 100%)" }}>
+        <section id="discovery" className="px-6 md:px-10 py-16 md:py-24" style={{ background: "linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 100%)" }}>
           <div className="max-w-[1500px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-12 md:gap-20 items-start">
               <div className="md:sticky md:top-24">
@@ -301,7 +315,7 @@ export default function GoogleSheetsPage() {
         </section>
 
         {/* ─── Pain Points ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="pain-points" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Research
@@ -362,7 +376,7 @@ export default function GoogleSheetsPage() {
         </section>
 
         {/* ─── Solution ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="solution" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <div className="mb-16 border-t border-[var(--color-jz-border)] pt-12">
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -470,7 +484,7 @@ export default function GoogleSheetsPage() {
         </section>
 
         {/* ─── Key Insights ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="key-insights" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Key Insights
@@ -509,7 +523,7 @@ export default function GoogleSheetsPage() {
         </section>
 
         {/* ─── Reflection / Learnings ─── */}
-        <section className="bg-[#fdeef4] overflow-hidden py-16 md:py-24">
+        <section id="reflection" className="bg-[#fdeef4] overflow-hidden py-16 md:py-24">
           <div className="overflow-hidden mb-14 cursor-default select-none">
             <div className="marquee-track flex whitespace-nowrap">
               {[0, 1].map((n) => (

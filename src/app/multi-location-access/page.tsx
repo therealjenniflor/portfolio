@@ -3,6 +3,7 @@ import Image from "next/image";
 import Nav from "@/components/portfolio/Nav";
 import Footer from "@/components/portfolio/Footer";
 import Link from "next/link";
+import CaseStudyNav from "@/components/portfolio/CaseStudyNav";
 
 export const metadata: Metadata = {
   title: "Multi-Location Access | JZ",
@@ -92,14 +93,28 @@ const reflection = [
   },
 ];
 
+const sections = [
+  { id: "hero", label: "Overview" },
+  { id: "context", label: "Context" },
+  { id: "problem", label: "Problem" },
+  { id: "business-goals", label: "Goals" },
+  { id: "pain-points", label: "Pain Points" },
+  { id: "solution", label: "Solution" },
+  { id: "new-user-modal", label: "New User Modal" },
+  { id: "mobile", label: "Mobile" },
+  { id: "prototype", label: "Prototype" },
+  { id: "reflection", label: "Reflection" },
+];
+
 export default function MultiLocationAccessPage() {
   return (
     <>
       <Nav />
+      <CaseStudyNav sections={sections} />
       <main className="bg-[var(--color-jz-bg)]">
 
         {/* Hero */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
+        <section id="hero" className="bg-[var(--color-jz-surface)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
@@ -135,7 +150,7 @@ export default function MultiLocationAccessPage() {
         </section>
 
         {/* Context */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="context" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12 md:gap-24 border-t border-[var(--color-jz-border)] pt-12">
             <div className="space-y-6">
               <div>
@@ -175,7 +190,7 @@ export default function MultiLocationAccessPage() {
         </section>
 
         {/* Problem Statement */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="problem" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Problem
@@ -229,7 +244,7 @@ export default function MultiLocationAccessPage() {
         </section>
 
         {/* Business Goals */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="business-goals" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 border-t border-[var(--color-jz-border)] pt-12">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -260,7 +275,7 @@ export default function MultiLocationAccessPage() {
         </section>
 
         {/* Pain Points */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="pain-points" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Pain Points
@@ -287,7 +302,7 @@ export default function MultiLocationAccessPage() {
         </section>
 
         {/* Solution: first two */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="solution" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Solution
@@ -336,7 +351,7 @@ export default function MultiLocationAccessPage() {
         </section>
 
         {/* Solution: New User Modal (sticky text + tall scrolling image) */}
-        <section className="bg-[#fdf8ee] px-6 md:px-10 py-16 md:py-24">
+        <section id="new-user-modal" className="bg-[#fdf8ee] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
 
             {/* Sticky text */}
@@ -390,7 +405,7 @@ export default function MultiLocationAccessPage() {
         </section>
 
         {/* Mobile Compatibility */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="mobile" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Mobile Compatibility
@@ -417,7 +432,7 @@ export default function MultiLocationAccessPage() {
         </section>
 
         {/* Interactive Prototype */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="prototype" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Prototype
@@ -439,7 +454,7 @@ export default function MultiLocationAccessPage() {
         </section>
 
         {/* Reflection */}
-        <section className="bg-[#1a130a] overflow-hidden py-16 md:py-24">
+        <section id="reflection" className="bg-[#1a130a] overflow-hidden py-16 md:py-24">
           <div className="overflow-hidden mb-14 cursor-default select-none">
             <div className="marquee-track flex whitespace-nowrap">
               {[0, 1].map((n) => (

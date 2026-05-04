@@ -2,6 +2,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Nav from "@/components/portfolio/Nav";
 import Footer from "@/components/portfolio/Footer";
+import CaseStudyNav from "@/components/portfolio/CaseStudyNav";
+
+const sections = [
+  { id: "overview",   label: "Overview"   },
+  { id: "role",       label: "My Role"    },
+  { id: "problem",    label: "Problem"    },
+  { id: "research",   label: "Research"   },
+  { id: "process",    label: "Process"    },
+  { id: "metrics",    label: "Metrics"    },
+  { id: "reflection", label: "Reflection" },
+  { id: "prototype",  label: "Prototype"  },
+];
 
 export const metadata: Metadata = {
   title: "Checkout Flow Redesign — JZ",
@@ -77,6 +89,7 @@ export default function PosRedesignPage() {
   return (
     <>
       <Nav />
+      <CaseStudyNav sections={sections} />
       <main className={c.bg}>
 
         {/* ─── Hero ─── */}
@@ -118,7 +131,7 @@ export default function PosRedesignPage() {
         </section>
 
         {/* ─── Overview ─── */}
-        <section className={`${c.surface} px-6 md:px-10 py-16 md:py-24`}>
+        <section id="overview" className={`${c.surface} px-6 md:px-10 py-16 md:py-24`}>
           <div className={`max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 border-t ${c.border} pt-12`}>
             <div>
               <p className={`font-body text-sm uppercase tracking-widest ${c.label} mb-3`}>
@@ -148,7 +161,7 @@ export default function PosRedesignPage() {
         </section>
 
         {/* ─── My Role ─── */}
-        <section className={`${c.bg} px-6 md:px-10 py-16 md:py-24`}>
+        <section id="role" className={`${c.bg} px-6 md:px-10 py-16 md:py-24`}>
           <div className="max-w-[1500px] mx-auto">
             <p className={`font-body text-sm uppercase tracking-widest ${c.label} mb-3`}>
               My Role
@@ -180,7 +193,7 @@ export default function PosRedesignPage() {
         </section>
 
         {/* ─── Before the Glow Up ─── */}
-        <section className={`${c.surface} px-6 md:px-10 py-16 md:py-24`}>
+        <section id="problem" className={`${c.surface} px-6 md:px-10 py-16 md:py-24`}>
           <div className="max-w-[1500px] mx-auto">
             <p className={`font-body text-sm uppercase tracking-widest ${c.label} mb-3`}>
               The Problem
@@ -235,7 +248,7 @@ export default function PosRedesignPage() {
         </section>
 
         {/* ─── Research ─── */}
-        <section className={`${c.bg} px-6 md:px-10 py-16 md:py-24`}>
+        <section id="research" className={`${c.bg} px-6 md:px-10 py-16 md:py-24`}>
           <div className="max-w-[1500px] mx-auto">
             <p className={`font-body text-sm uppercase tracking-widest ${c.label} mb-3`}>
               Research Phase
@@ -286,7 +299,7 @@ export default function PosRedesignPage() {
         </section>
 
         {/* ─── My Process ─── */}
-        <section className={`${c.surface} px-6 md:px-10 py-16 md:py-24`}>
+        <section id="process" className={`${c.surface} px-6 md:px-10 py-16 md:py-24`}>
           <div className="max-w-[1500px] mx-auto">
             <h2 className={`font-display text-4xl md:text-5xl font-bold ${c.text} mb-12 text-center`}>
               My Process
@@ -378,7 +391,7 @@ export default function PosRedesignPage() {
         </section>
 
         {/* ─── Metrics ─── */}
-        <section className={`${c.bg} px-6 md:px-10 py-16 md:py-24`}>
+        <section id="metrics" className={`${c.bg} px-6 md:px-10 py-16 md:py-24`}>
           <div className="max-w-[1500px] mx-auto">
             <p className={`font-body text-sm uppercase tracking-widest ${c.label} mb-3`}>
               Measuring Success
@@ -469,7 +482,7 @@ export default function PosRedesignPage() {
         </section>
 
         {/* ─── Reflection ─── */}
-        <section className="bg-[#1a130a] overflow-hidden py-16 md:py-24">
+        <section id="reflection" className="bg-[#1a130a] overflow-hidden py-16 md:py-24">
 
           {/* Scrolling marquee ticker */}
           <div className="overflow-hidden mb-14 cursor-default select-none" title="Hover to pause">
@@ -536,7 +549,7 @@ export default function PosRedesignPage() {
         </section>
 
         {/* ─── Prototype / Video ─── */}
-        <section className={`${c.surface} px-6 md:px-10 py-16 md:py-24`}>
+        <section id="prototype" className={`${c.surface} px-6 md:px-10 py-16 md:py-24`}>
           <div className="max-w-[1500px] mx-auto">
             <p className={`font-body text-sm uppercase tracking-widest ${c.label} mb-3`}>
               The Prototype

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Nav from "@/components/portfolio/Nav";
 import Footer from "@/components/portfolio/Footer";
 import Link from "next/link";
+import CaseStudyNav from "@/components/portfolio/CaseStudyNav";
 
 export const metadata: Metadata = {
   title: "Production Dashboard — JZ",
@@ -85,14 +86,29 @@ const newFeatures = [
   },
 ];
 
+const sections = [
+  { id: "hero", label: "Overview" },
+  { id: "context", label: "Context" },
+  { id: "problem", label: "Problem" },
+  { id: "audit", label: "Audit" },
+  { id: "research", label: "Research" },
+  { id: "users", label: "Users" },
+  { id: "mid-fidelity", label: "Mid-Fi" },
+  { id: "before-after", label: "Before / After" },
+  { id: "new-features", label: "New Features" },
+  { id: "impact", label: "Impact" },
+  { id: "learnings", label: "Learnings" },
+];
+
 export default function DashboardRedesignPage() {
   return (
     <>
       <Nav />
+      <CaseStudyNav sections={sections} />
       <main>
 
         {/* ─── Hero ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
+        <section id="hero" className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
@@ -125,7 +141,7 @@ export default function DashboardRedesignPage() {
         </section>
 
         {/* ─── Context ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="context" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -175,7 +191,7 @@ export default function DashboardRedesignPage() {
         </section>
 
         {/* ─── Problem ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="problem" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto border-t border-[var(--color-jz-border)] pt-12">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Problem
@@ -205,7 +221,7 @@ export default function DashboardRedesignPage() {
         </section>
 
         {/* ─── Process: Audit ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="audit" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Process: Step 01
@@ -252,7 +268,7 @@ export default function DashboardRedesignPage() {
         </section>
 
         {/* ─── Process: User Research ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="research" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Process: Step 02
@@ -354,7 +370,7 @@ export default function DashboardRedesignPage() {
         </section>
 
         {/* ─── Understanding the users ─── */}
-        <section className="px-6 md:px-10 py-16 md:py-24" style={{ background: "linear-gradient(135deg, #fef6cc 0%, #fce4e8 100%)" }}>
+        <section id="users" className="px-6 md:px-10 py-16 md:py-24" style={{ background: "linear-gradient(135deg, #fef6cc 0%, #fce4e8 100%)" }}>
           <div className="max-w-[1500px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-12 md:gap-20 items-start">
 
@@ -408,7 +424,7 @@ export default function DashboardRedesignPage() {
         </section>
 
         {/* ─── Mid-Fidelity ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="mid-fidelity" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm font-bold text-[var(--color-jz-text)] mb-3">
               Ideation time!
@@ -445,7 +461,7 @@ export default function DashboardRedesignPage() {
         </section>
 
         {/* ─── Before / After ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="before-after" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Approach: Information Architecture
@@ -499,7 +515,7 @@ export default function DashboardRedesignPage() {
         </section>
 
         {/* ─── New Product Features ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="new-features" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
 
             {/* Header */}
@@ -621,7 +637,7 @@ export default function DashboardRedesignPage() {
         </section>
 
         {/* ─── Impact ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="impact" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">Results</p>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-jz-text)] mb-16 leading-tight">
@@ -688,7 +704,7 @@ export default function DashboardRedesignPage() {
         </section>
 
         {/* ─── Learnings ─── */}
-        <section className="bg-[#fdeef4] overflow-hidden py-16 md:py-24">
+        <section id="learnings" className="bg-[#fdeef4] overflow-hidden py-16 md:py-24">
           <div className="overflow-hidden mb-14 cursor-default select-none" title="Hover to pause">
             <div className="marquee-track flex whitespace-nowrap">
               {[0, 1].map((n) => (

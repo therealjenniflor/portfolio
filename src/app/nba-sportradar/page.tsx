@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Nav from "@/components/portfolio/Nav";
 import Footer from "@/components/portfolio/Footer";
+import CaseStudyNav from "@/components/portfolio/CaseStudyNav";
 
 export const metadata: Metadata = {
   title: "NBA × Sportradar — JZ",
@@ -65,10 +66,24 @@ const futureProviders = [
   "Opta Sports",
 ];
 
+const sections = [
+  { id: "hero", label: "Overview" },
+  { id: "context", label: "Context" },
+  { id: "business-goal", label: "Goal" },
+  { id: "process", label: "Process" },
+  { id: "step-1", label: "Step 1" },
+  { id: "step-2", label: "Step 2" },
+  { id: "step-3", label: "Step 3" },
+  { id: "scalability", label: "Scalability" },
+  { id: "final-design", label: "Final Design" },
+  { id: "learnings", label: "Learnings" },
+];
+
 export default function NbaSportradarPage() {
   return (
     <>
       <Nav />
+      <CaseStudyNav sections={sections} />
       <main>
 
         {/* ─── Marquee ─── */}
@@ -108,7 +123,7 @@ export default function NbaSportradarPage() {
         </section>
 
         {/* ─── Hero ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
+        <section id="hero" className="bg-[var(--color-jz-bg)] px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-4">
@@ -144,7 +159,7 @@ export default function NbaSportradarPage() {
         </section>
 
         {/* ─── Context ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="context" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -189,7 +204,7 @@ export default function NbaSportradarPage() {
         </section>
 
         {/* ─── Business Goal ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="business-goal" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto border-t border-[var(--color-jz-border)] pt-12">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Business Goal
@@ -208,7 +223,7 @@ export default function NbaSportradarPage() {
         </section>
 
         {/* ─── My Process ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="process" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Process
@@ -235,7 +250,7 @@ export default function NbaSportradarPage() {
         </section>
 
         {/* ─── Step 1 Detail: Understanding Parameters ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="step-1" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div>
               <Image
@@ -288,7 +303,7 @@ export default function NbaSportradarPage() {
         </section>
 
         {/* ─── Step 2 Detail: Postman Exploration ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="step-2" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div>
               <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
@@ -349,7 +364,7 @@ export default function NbaSportradarPage() {
         </section>
 
         {/* ─── Step 3: Selecting Parameters ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="step-3" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               Step 3: Selecting Parameters
@@ -376,7 +391,7 @@ export default function NbaSportradarPage() {
         </section>
 
         {/* ─── Scalability ─── */}
-        <section className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
+        <section id="scalability" className="bg-[var(--color-jz-surface)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-10">
               <div>
@@ -441,7 +456,7 @@ export default function NbaSportradarPage() {
         </section>
 
         {/* ─── Final Design ─── */}
-        <section className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
+        <section id="final-design" className="bg-[var(--color-jz-bg)] px-6 md:px-10 py-16 md:py-24">
           <div className="max-w-[1500px] mx-auto">
             <p className="font-body text-sm uppercase tracking-widest text-[var(--color-jz-text-muted)] mb-3">
               The Solution
@@ -515,7 +530,7 @@ export default function NbaSportradarPage() {
         </section>
 
         {/* ─── Learnings ─── */}
-        <section className="bg-[#0d1117] overflow-hidden py-16 md:py-24">
+        <section id="learnings" className="bg-[#0d1117] overflow-hidden py-16 md:py-24">
           <div className="overflow-hidden mb-14 cursor-default select-none" title="Hover to pause">
             <div className="marquee-track flex whitespace-nowrap">
               {[0, 1].map((n) => (
